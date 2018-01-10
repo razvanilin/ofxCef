@@ -1,5 +1,6 @@
-﻿#include "ofxCEFV8ExtensionHandler.h"
+#include "ofxCEFV8ExtensionHandler.h"
 
+#include "cefListV8Converter.hpp"
 #include <iostream>
 #include <string>
 
@@ -14,6 +15,30 @@ bool ofxCEFV8ExtensionHandler::Execute(const CefString &name,
                                        const CefV8ValueList &arguments,
                                        CefRefPtr<CefV8Value> &retval,
                                        CefString &exception){
+    
+    
+    std::string functionName = name;
+    printf("Execute name: %s \n", functionName.c_str());
+    
+    if (bindJSFunctionNames.find(functionName) != bindJSFunctionNames.end()) {
+        
+        // Create the message object with a prefix + name of the function.
+        // There is probably a more efficient way to combine these
+        const std::string jsBindPrefix = "js-bind-";
+        CefRefPtr<CefProcessMessage> message = CefProcessMessage::Create(CefString(jsBindPrefix + functionName));
+        
+        // Retrieve the argument list object.
+        CefRefPtr<CefListValue> args = message->GetArgumentList();
+        
+        convertList(arguments, args);
+        
+        // Send message
+        CefRefPtr<CefBrowser> browser = CefV8Context::GetCurrentContext()->GetBrowser();
+        browser->SendProcessMessage(PID_BROWSER, message);
+        return true;
+    }
+    
+    
     if (name == "sendMessageToOF") {
         if (arguments.size() == 2 && arguments[0]->IsString()) {
             CefString type;

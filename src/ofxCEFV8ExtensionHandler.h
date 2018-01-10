@@ -1,7 +1,8 @@
-﻿#ifndef __CEF3SimpleSample__ClientV8ExtensionHandler__
+#ifndef __CEF3SimpleSample__ClientV8ExtensionHandler__
 #define __CEF3SimpleSample__ClientV8ExtensionHandler__
 
 #include "include/cef_app.h"
+#include <set>
 
 //--------------------------------------------------------------
 struct ofxCEFV8ExtensionHandler : public CefV8Handler
@@ -13,10 +14,12 @@ struct ofxCEFV8ExtensionHandler : public CefV8Handler
                  const CefV8ValueList &arguments,
                  CefRefPtr<CefV8Value> &retval,
                  CefString &exception) OVERRIDE;
-
+    
+    std::set<std::string> bindJSFunctionNames;
+    
 private:
     CefRefPtr<CefApp> app;
-
+    
     IMPLEMENT_REFCOUNTING(ofxCEFV8ExtensionHandler);
 };
 

@@ -3,21 +3,29 @@
 
 #include "include/cef_app.h"
 #include "include/cef_client.h"
+#include "ofxCEFV8ExtensionHandler.h"
 
 //--------------------------------------------------------------
 class ofxCEFClientApp : public CefApp, public CefRenderProcessHandler
 {
 public:
-    ofxCEFClientApp();
+    ofxCEFClientApp(): v8handler(new ofxCEFV8ExtensionHandler(this)) {};
 
-    CefRefPtr<CefRenderProcessHandler> GetRenderProcessHandler() OVERRIDE
-    {
+    CefRefPtr<CefRenderProcessHandler> GetRenderProcessHandler() OVERRIDE {
         return this;
     }
 
     void OnWebKitInitialized() OVERRIDE;
 
-	virtual void OnBeforeCommandLineProcessing( const CefString& process_type, CefRefPtr<CefCommandLine> command_line) {
+    void OnContextCreated(CefRefPtr<CefBrowser> browser,
+                          CefRefPtr<CefFrame> frame,
+                          CefRefPtr<CefV8Context> context) OVERRIDE;
+
+    bool OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
+                                  CefProcessId source_process,
+                                  CefRefPtr<CefProcessMessage> message) OVERRIDE;
+
+	virtual void OnBeforeCommandLineProcessing( const CefString& process_type, CefRefPtr<CefCommandLine> command_line) OVERRIDE {
 #if defined(TARGET_OSX)
 
         
@@ -54,6 +62,9 @@ public:
 		// command_line->AppendSwitch(touchSimulated);
 
 	}
+
+    CefRefPtr<ofxCEFV8ExtensionHandler> v8handler;
+    CefRefPtr<CefV8Context> v8context;
 
     IMPLEMENT_REFCOUNTING(ofxCEFClientApp);
 };

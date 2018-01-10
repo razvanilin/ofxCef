@@ -1,0 +1,1226 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		412C18201F95F89200E2B940 /* ofxCEFClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89AD4DFAC7F42E57B775AA47 /* ofxCEFClientApp.cpp */; };
+		412C18221F95F89200E2B940 /* ofxCEFV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3379499ACE8BED89F23E2F5E /* ofxCEFV8ExtensionHandler.cpp */; };
+		412C18251F95F89200E2B940 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676C60DA887A77C13D96A1B0 /* Chromium Embedded Framework.framework */; };
+		412C18301F95F8D900E2B940 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CB6F3196C2D9B0DA81F16D /* process_helper_mac.cpp */; };
+		412C18361F960C7600E2B940 /* cefListV8Converter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 412C18331F960C4000E2B940 /* cefListV8Converter.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A8105CE56A23A4C633630A /* cef_callback_forward.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_callback_forward.h; path = ../libs/CEF/include/base/cef_callback_forward.h; sourceTree = SOURCE_ROOT; };
+		00D150121E6B8DE928112F51 /* cef_waitable_event_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_waitable_event_capi.h; path = ../libs/CEF/include/capi/cef_waitable_event_capi.h; sourceTree = SOURCE_ROOT; };
+		017E16E2C4B8299743C254B7 /* cef_layout_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_layout_capi.h; path = ../libs/CEF/include/capi/views/cef_layout_capi.h; sourceTree = SOURCE_ROOT; };
+		02F78BAEDBB86570BA2588BC /* cef_button_delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_button_delegate.h; path = ../libs/CEF/include/views/cef_button_delegate.h; sourceTree = SOURCE_ROOT; };
+		031B6A340DB74F78EBE35147 /* cef_window_delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_window_delegate.h; path = ../libs/CEF/include/views/cef_window_delegate.h; sourceTree = SOURCE_ROOT; };
+		047C8DAF1B30506877191E84 /* cef_find_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_find_handler_capi.h; path = ../libs/CEF/include/capi/cef_find_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		059300C27320B4260EEC4FFB /* cef_logging_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_logging_internal.h; path = ../libs/CEF/include/internal/cef_logging_internal.h; sourceTree = SOURCE_ROOT; };
+		059AA750DCA8C3833EA24BC8 /* cef_thread_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_thread_internal.h; path = ../libs/CEF/include/internal/cef_thread_internal.h; sourceTree = SOURCE_ROOT; };
+		05ADCC883BC5615B6F177029 /* cef_context_menu_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_context_menu_handler.h; path = ../libs/CEF/include/cef_context_menu_handler.h; sourceTree = SOURCE_ROOT; };
+		06472639AD85EF051FEA7431 /* cef_cookie.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_cookie.h; path = ../libs/CEF/include/cef_cookie.h; sourceTree = SOURCE_ROOT; };
+		0845B85888A04020814C173C /* cef_move.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_move.h; path = ../libs/CEF/include/base/cef_move.h; sourceTree = SOURCE_ROOT; };
+		0A305D19C6A4B8BEEB6FA998 /* cef_request_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_request_handler_capi.h; path = ../libs/CEF/include/capi/cef_request_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		0AE3262580C47405CB26E38B /* ofxCEFBrowserClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCEFBrowserClient.h; path = ../src/ofxCEFBrowserClient.h; sourceTree = SOURCE_ROOT; };
+		0B650DDEB39DF966B9DAA237 /* cef_dialog_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_dialog_handler_capi.h; path = ../libs/CEF/include/capi/cef_dialog_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		0C093F1B6443E27053D04177 /* cef_navigation_entry.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_navigation_entry.h; path = ../libs/CEF/include/cef_navigation_entry.h; sourceTree = SOURCE_ROOT; };
+		0C3DC7A3FFFF369BF286F29D /* ofxCEFRenderHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCEFRenderHandler.h; path = ../src/ofxCEFRenderHandler.h; sourceTree = SOURCE_ROOT; };
+		0CCE147FA33FB24788A3CA48 /* cef_resource_bundle_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_resource_bundle_handler_capi.h; path = ../libs/CEF/include/capi/cef_resource_bundle_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		0CD43EE3962AED5065E9C3BF /* cef_browser_view_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_browser_view_delegate_capi.h; path = ../libs/CEF/include/capi/views/cef_browser_view_delegate_capi.h; sourceTree = SOURCE_ROOT; };
+		0D07CB8CB6CF01B2BB7408B4 /* cef_app_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_app_capi.h; path = ../libs/CEF/include/capi/cef_app_capi.h; sourceTree = SOURCE_ROOT; };
+		104AC27D6D3D6FF146611523 /* cef_atomic_ref_count.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_atomic_ref_count.h; path = ../libs/CEF/include/base/cef_atomic_ref_count.h; sourceTree = SOURCE_ROOT; };
+		10DE145D13551CBD88AD97D9 /* cef_load_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_load_handler.h; path = ../libs/CEF/include/cef_load_handler.h; sourceTree = SOURCE_ROOT; };
+		121B0D8007849FF91345E405 /* cef_crash_util_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_crash_util_capi.h; path = ../libs/CEF/include/capi/cef_crash_util_capi.h; sourceTree = SOURCE_ROOT; };
+		134ECD9508E4F52B4E9FD219 /* cef_button_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_button_delegate_capi.h; path = ../libs/CEF/include/capi/views/cef_button_delegate_capi.h; sourceTree = SOURCE_ROOT; };
+		13AD7A9B1246E1E57DA2272E /* cef_thread_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_thread_capi.h; path = ../libs/CEF/include/capi/cef_thread_capi.h; sourceTree = SOURCE_ROOT; };
+		1498BACB0A03F29EF2669DD1 /* cef_path_util_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_path_util_capi.h; path = ../libs/CEF/include/capi/cef_path_util_capi.h; sourceTree = SOURCE_ROOT; };
+		154AB519F2F707B68346564B /* cef_browser_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_browser_capi.h; path = ../libs/CEF/include/capi/cef_browser_capi.h; sourceTree = SOURCE_ROOT; };
+		16E52E9A6A80705DA7B4F203 /* cef_download_item_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_download_item_capi.h; path = ../libs/CEF/include/capi/cef_download_item_capi.h; sourceTree = SOURCE_ROOT; };
+		186BF04FBA3EC6A11700021C /* cef_keyboard_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_keyboard_handler_capi.h; path = ../libs/CEF/include/capi/cef_keyboard_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		1B2D11DA404B8837D4E4D64D /* cef_fill_layout_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_fill_layout_capi.h; path = ../libs/CEF/include/capi/views/cef_fill_layout_capi.h; sourceTree = SOURCE_ROOT; };
+		1B9C62A4DB587ACCDF641086 /* cef_lock_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_lock_impl.h; path = ../libs/CEF/include/base/internal/cef_lock_impl.h; sourceTree = SOURCE_ROOT; };
+		1C102D9EF9DBCA23FE140ECB /* cef_print_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_print_handler_capi.h; path = ../libs/CEF/include/capi/cef_print_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		1C49AD81E3996416CD438722 /* cef_display.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_display.h; path = ../libs/CEF/include/views/cef_display.h; sourceTree = SOURCE_ROOT; };
+		1E7C0BDF75386AD873677DD9 /* cef_types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_types.h; path = ../libs/CEF/include/internal/cef_types.h; sourceTree = SOURCE_ROOT; };
+		1FD43B29A1B7A34812370C68 /* cef_request_context_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_request_context_handler.h; path = ../libs/CEF/include/cef_request_context_handler.h; sourceTree = SOURCE_ROOT; };
+		226403B84D05BABFA9449E03 /* cef_byte_read_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_byte_read_handler.h; path = ../libs/CEF/include/wrapper/cef_byte_read_handler.h; sourceTree = SOURCE_ROOT; };
+		22AB56E43254814FE4460E95 /* cef_time.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_time.h; path = ../libs/CEF/include/internal/cef_time.h; sourceTree = SOURCE_ROOT; };
+		247736F75982E305A6F0C7FD /* cef_browser_process_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_browser_process_handler_capi.h; path = ../libs/CEF/include/capi/cef_browser_process_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		250C220D10818B2FA4484A75 /* cef_browser_process_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_browser_process_handler.h; path = ../libs/CEF/include/cef_browser_process_handler.h; sourceTree = SOURCE_ROOT; };
+		2563B284BE4063E2A3BAEC3B /* cef_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_ptr.h; path = ../libs/CEF/include/internal/cef_ptr.h; sourceTree = SOURCE_ROOT; };
+		28A105414ED8183C3F15324C /* cef_pack_resources.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_pack_resources.h; path = ../libs/CEF/include/cef_pack_resources.h; sourceTree = SOURCE_ROOT; };
+		2925A8C13AEDB281B815571C /* cef_panel_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_panel_capi.h; path = ../libs/CEF/include/capi/views/cef_panel_capi.h; sourceTree = SOURCE_ROOT; };
+		2AFC60A383F139CB1F605861 /* cef_types_mac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_types_mac.h; path = ../libs/CEF/include/internal/cef_types_mac.h; sourceTree = SOURCE_ROOT; };
+		2B8BD4295891913162B8DF70 /* cef_drag_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_drag_handler.h; path = ../libs/CEF/include/cef_drag_handler.h; sourceTree = SOURCE_ROOT; };
+		2BF16FEF5614D19912488A40 /* cef_load_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_load_handler_capi.h; path = ../libs/CEF/include/capi/cef_load_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		2C74ADA1533A962430AFD0D7 /* cef_string_multimap.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string_multimap.h; path = ../libs/CEF/include/internal/cef_string_multimap.h; sourceTree = SOURCE_ROOT; };
+		2CAAA34EE80DB4ACC4C5306A /* cef_window_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_window_capi.h; path = ../libs/CEF/include/capi/views/cef_window_capi.h; sourceTree = SOURCE_ROOT; };
+		3121C241E011CFF75067DFAF /* cef_values_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_values_capi.h; path = ../libs/CEF/include/capi/cef_values_capi.h; sourceTree = SOURCE_ROOT; };
+		3143840145828E4E66F563B6 /* ofxCEFBrowserClient.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxCEFBrowserClient.cpp; path = ../src/ofxCEFBrowserClient.cpp; sourceTree = SOURCE_ROOT; };
+		3231E0A6CFAC7877742CF12A /* cef_image_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_image_capi.h; path = ../libs/CEF/include/capi/cef_image_capi.h; sourceTree = SOURCE_ROOT; };
+		334127ACD4FE80EFD16B87B5 /* cef_basictypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_basictypes.h; path = ../libs/CEF/include/base/cef_basictypes.h; sourceTree = SOURCE_ROOT; };
+		3379499ACE8BED89F23E2F5E /* ofxCEFV8ExtensionHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxCEFV8ExtensionHandler.cpp; path = ../src/ofxCEFV8ExtensionHandler.cpp; sourceTree = SOURCE_ROOT; };
+		349532B383A38AD87BA7A4E1 /* cef_origin_whitelist.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_origin_whitelist.h; path = ../libs/CEF/include/cef_origin_whitelist.h; sourceTree = SOURCE_ROOT; };
+		34C1CDEDC38C102B81E8494A /* cef_menu_model.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_menu_model.h; path = ../libs/CEF/include/cef_menu_model.h; sourceTree = SOURCE_ROOT; };
+		3840DE048C5FBEAE2CC70E5B /* cef_request_context_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_request_context_handler_capi.h; path = ../libs/CEF/include/capi/cef_request_context_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		388C19E9C55DF584C475CE53 /* cef_response_filter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_response_filter.h; path = ../libs/CEF/include/cef_response_filter.h; sourceTree = SOURCE_ROOT; };
+		389B7DFBEF093DA208D44B05 /* cef_thread_collision_warner.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_thread_collision_warner.h; path = ../libs/CEF/include/base/cef_thread_collision_warner.h; sourceTree = SOURCE_ROOT; };
+		3B47AF130DF363B72632ECAE /* cef_response.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_response.h; path = ../libs/CEF/include/cef_response.h; sourceTree = SOURCE_ROOT; };
+		3BFE095A29B0BBEC8627C01D /* cef_jsdialog_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_jsdialog_handler.h; path = ../libs/CEF/include/cef_jsdialog_handler.h; sourceTree = SOURCE_ROOT; };
+		3C0E421EF35AA181EF895B47 /* cef_crash_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_crash_util.h; path = ../libs/CEF/include/cef_crash_util.h; sourceTree = SOURCE_ROOT; };
+		3C7D24056C6346BA9C5AA5E3 /* cef_label_button.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_label_button.h; path = ../libs/CEF/include/views/cef_label_button.h; sourceTree = SOURCE_ROOT; };
+		3E7C109DA77EB56E32C3A24F /* cef_auth_callback_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_auth_callback_capi.h; path = ../libs/CEF/include/capi/cef_auth_callback_capi.h; sourceTree = SOURCE_ROOT; };
+		3F493CAE36A0A340083C98E6 /* cef_browser_view.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_browser_view.h; path = ../libs/CEF/include/views/cef_browser_view.h; sourceTree = SOURCE_ROOT; };
+		3FFCCF5BFCF4EC58BD956489 /* cef_window.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_window.h; path = ../libs/CEF/include/views/cef_window.h; sourceTree = SOURCE_ROOT; };
+		40B183EE77C90CFBDCCD19F3 /* cef_task_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_task_capi.h; path = ../libs/CEF/include/capi/cef_task_capi.h; sourceTree = SOURCE_ROOT; };
+		40C4C7E93D0AC8CFA8C233FA /* cef_layout.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_layout.h; path = ../libs/CEF/include/views/cef_layout.h; sourceTree = SOURCE_ROOT; };
+		412C182E1F95F89200E2B940 /* cef_helper_mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cef_helper_mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		412C18331F960C4000E2B940 /* cefListV8Converter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = cefListV8Converter.cpp; path = ../src/cefListV8Converter.cpp; sourceTree = "<group>"; };
+		412C18341F960C4000E2B940 /* cefListV8Converter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = cefListV8Converter.hpp; path = ../src/cefListV8Converter.hpp; sourceTree = "<group>"; };
+		419E8BEA1EAF91C6001970BA /* cefclient Helper.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = "cefclient Helper.app"; path = "../../../addons/ofxCef/libs/CEF/lib/osx/cefclient Helper.app"; sourceTree = "<group>"; };
+		439DF123438C870E5C8AFED2 /* cef_life_span_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_life_span_handler.h; path = ../libs/CEF/include/cef_life_span_handler.h; sourceTree = SOURCE_ROOT; };
+		46F32FD28C3646EC96B69230 /* cef_keyboard_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_keyboard_handler.h; path = ../libs/CEF/include/cef_keyboard_handler.h; sourceTree = SOURCE_ROOT; };
+		478483E97555F9E10687F4DB /* cef_resource_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_resource_handler_capi.h; path = ../libs/CEF/include/capi/cef_resource_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		48B6A5B3593B0BBB3650B43A /* cef_template_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_template_util.h; path = ../libs/CEF/include/base/cef_template_util.h; sourceTree = SOURCE_ROOT; };
+		49BE215952E47933C20D6F06 /* cef_ssl_info.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_ssl_info.h; path = ../libs/CEF/include/cef_ssl_info.h; sourceTree = SOURCE_ROOT; };
+		4A1567AC9B9C51C39F0DB15B /* cef_string_visitor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string_visitor.h; path = ../libs/CEF/include/cef_string_visitor.h; sourceTree = SOURCE_ROOT; };
+		4A4BFCD1008F4FF5D351DCBF /* cef_geolocation.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_geolocation.h; path = ../libs/CEF/include/cef_geolocation.h; sourceTree = SOURCE_ROOT; };
+		4A67BE045428656379914865 /* cef_auth_callback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_auth_callback.h; path = ../libs/CEF/include/cef_auth_callback.h; sourceTree = SOURCE_ROOT; };
+		4B9582027B920B8C59B8AB9E /* cef_display_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_display_capi.h; path = ../libs/CEF/include/capi/views/cef_display_capi.h; sourceTree = SOURCE_ROOT; };
+		4CC5EE2C018FD1075B98A8DF /* cef_client_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_client_capi.h; path = ../libs/CEF/include/capi/cef_client_capi.h; sourceTree = SOURCE_ROOT; };
+		4D94F1D1DBC9EEC7F3D81FFB /* cef_mac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_mac.h; path = ../libs/CEF/include/internal/cef_mac.h; sourceTree = SOURCE_ROOT; };
+		4E0F5AB39E6B1884FEFC76E6 /* cef_geolocation_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_geolocation_handler.h; path = ../libs/CEF/include/cef_geolocation_handler.h; sourceTree = SOURCE_ROOT; };
+		4E662E2BE8FA3F3CD8627E79 /* cef_callback_helpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_callback_helpers.h; path = ../libs/CEF/include/base/cef_callback_helpers.h; sourceTree = SOURCE_ROOT; };
+		4EE09C32EA75504996C50264 /* cef_client.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_client.h; path = ../libs/CEF/include/cef_client.h; sourceTree = SOURCE_ROOT; };
+		50018A028DCD8126C544228A /* cef_jsdialog_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_jsdialog_handler_capi.h; path = ../libs/CEF/include/capi/cef_jsdialog_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		50314BC1D32D0291D19773D6 /* cef_build.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_build.h; path = ../libs/CEF/include/base/cef_build.h; sourceTree = SOURCE_ROOT; };
+		5036D955357F3411DF16F435 /* cef_scoped_temp_dir.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_scoped_temp_dir.h; path = ../libs/CEF/include/wrapper/cef_scoped_temp_dir.h; sourceTree = SOURCE_ROOT; };
+		508464688AB39F14B94C2657 /* cef_menu_button.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_menu_button.h; path = ../libs/CEF/include/views/cef_menu_button.h; sourceTree = SOURCE_ROOT; };
+		50D28E29580015D5AC2C85E4 /* cef_atomicops_mac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_atomicops_mac.h; path = ../libs/CEF/include/base/internal/cef_atomicops_mac.h; sourceTree = SOURCE_ROOT; };
+		5448DBA53F3ABDC880631289 /* cef_box_layout.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_box_layout.h; path = ../libs/CEF/include/views/cef_box_layout.h; sourceTree = SOURCE_ROOT; };
+		5472E6535C5787BA2C551CEC /* cef_context_menu_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_context_menu_handler_capi.h; path = ../libs/CEF/include/capi/cef_context_menu_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		579F61271EEB97F9A5D433BD /* cef_application_mac.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_application_mac.h; path = ../libs/CEF/include/cef_application_mac.h; sourceTree = SOURCE_ROOT; };
+		57C4446AD7A409567C1E962B /* cef_print_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_print_handler.h; path = ../libs/CEF/include/cef_print_handler.h; sourceTree = SOURCE_ROOT; };
+		5C496F327ADD217E1DC27F0D /* cef_button.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_button.h; path = ../libs/CEF/include/views/cef_button.h; sourceTree = SOURCE_ROOT; };
+		5FBB25522DC5F8D647D4623B /* cef_focus_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_focus_handler_capi.h; path = ../libs/CEF/include/capi/cef_focus_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		5FF69BDDC0662438F8085A5A /* cef_macros.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_macros.h; path = ../libs/CEF/include/base/cef_macros.h; sourceTree = SOURCE_ROOT; };
+		600D52614EC4E1E71194581C /* cef_request_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_request_handler.h; path = ../libs/CEF/include/cef_request_handler.h; sourceTree = SOURCE_ROOT; };
+		603926EDA9D076FBC432131C /* cef_closure_task.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_closure_task.h; path = ../libs/CEF/include/wrapper/cef_closure_task.h; sourceTree = SOURCE_ROOT; };
+		60E6702B2899022E7917CCCE /* cef_cancelable_callback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_cancelable_callback.h; path = ../libs/CEF/include/base/cef_cancelable_callback.h; sourceTree = SOURCE_ROOT; };
+		61293345140F13151C1CBE63 /* cef_image.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_image.h; path = ../libs/CEF/include/cef_image.h; sourceTree = SOURCE_ROOT; };
+		648A35182AE01AEBC10EB168 /* cef_string_list.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string_list.h; path = ../libs/CEF/include/internal/cef_string_list.h; sourceTree = SOURCE_ROOT; };
+		648DEAD0C5E90DC0FD2F3996 /* cef_callback_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_callback_internal.h; path = ../libs/CEF/include/base/internal/cef_callback_internal.h; sourceTree = SOURCE_ROOT; };
+		650FC4146655FDF53ECC0CC7 /* cef_urlrequest_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_urlrequest_capi.h; path = ../libs/CEF/include/capi/cef_urlrequest_capi.h; sourceTree = SOURCE_ROOT; };
+		65679B700347062AF587D46F /* cef_menu_model_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_menu_model_capi.h; path = ../libs/CEF/include/capi/cef_menu_model_capi.h; sourceTree = SOURCE_ROOT; };
+		664680A952F7CBAF70530210 /* cef_textfield_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_textfield_delegate_capi.h; path = ../libs/CEF/include/capi/views/cef_textfield_delegate_capi.h; sourceTree = SOURCE_ROOT; };
+		676C60DA887A77C13D96A1B0 /* Chromium Embedded Framework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Chromium Embedded Framework.framework"; path = "../../../addons/ofxCef/libs/CEF/lib/osx/Chromium Embedded Framework.framework"; sourceTree = "<group>"; };
+		69DD2B73DA672AF8EDCAE485 /* cef_zip_archive.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_zip_archive.h; path = ../libs/CEF/include/wrapper/cef_zip_archive.h; sourceTree = SOURCE_ROOT; };
+		6A13FCE8988DE4E6D169F272 /* cef_menu_button_delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_menu_button_delegate.h; path = ../libs/CEF/include/views/cef_menu_button_delegate.h; sourceTree = SOURCE_ROOT; };
+		6A6F5A17E5CBAE3741D17F53 /* cef_values.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_values.h; path = ../libs/CEF/include/cef_values.h; sourceTree = SOURCE_ROOT; };
+		6A7E0328FF995A402DD65977 /* cef_render_process_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_render_process_handler.h; path = ../libs/CEF/include/cef_render_process_handler.h; sourceTree = SOURCE_ROOT; };
+		6B5F8F62B3709F8C153081D2 /* cef_scheme.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_scheme.h; path = ../libs/CEF/include/cef_scheme.h; sourceTree = SOURCE_ROOT; };
+		6C6A6AB283856D6025BB20FC /* cef_scheme_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_scheme_capi.h; path = ../libs/CEF/include/capi/cef_scheme_capi.h; sourceTree = SOURCE_ROOT; };
+		6C7735FA9C6495D2EA75773E /* cef_panel_delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_panel_delegate.h; path = ../libs/CEF/include/views/cef_panel_delegate.h; sourceTree = SOURCE_ROOT; };
+		6D6431CF3803CA041DC14D39 /* cef_thread_checker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_thread_checker.h; path = ../libs/CEF/include/base/cef_thread_checker.h; sourceTree = SOURCE_ROOT; };
+		6F757022354536F97D578C44 /* cef_response_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_response_capi.h; path = ../libs/CEF/include/capi/cef_response_capi.h; sourceTree = SOURCE_ROOT; };
+		709249AD4B4EE086C6263E45 /* cef_browser_view_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_browser_view_capi.h; path = ../libs/CEF/include/capi/views/cef_browser_view_capi.h; sourceTree = SOURCE_ROOT; };
+		7169E7224E326C4E54C695C1 /* cef_menu_model_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_menu_model_delegate_capi.h; path = ../libs/CEF/include/capi/cef_menu_model_delegate_capi.h; sourceTree = SOURCE_ROOT; };
+		719F77935CEF86E0881894A2 /* cef_xml_reader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_xml_reader.h; path = ../libs/CEF/include/cef_xml_reader.h; sourceTree = SOURCE_ROOT; };
+		7280F52F28DEAB3B1FFAAC36 /* cef_ssl_status_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_ssl_status_capi.h; path = ../libs/CEF/include/capi/cef_ssl_status_capi.h; sourceTree = SOURCE_ROOT; };
+		743396C8F905AA5D92C6FDB1 /* cef_waitable_event.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_waitable_event.h; path = ../libs/CEF/include/cef_waitable_event.h; sourceTree = SOURCE_ROOT; };
+		75A38693D65885690FE0A798 /* cef_drag_data.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_drag_data.h; path = ../libs/CEF/include/cef_drag_data.h; sourceTree = SOURCE_ROOT; };
+		76010F48767E8729B89FB6E9 /* cef_atomicops.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_atomicops.h; path = ../libs/CEF/include/base/cef_atomicops.h; sourceTree = SOURCE_ROOT; };
+		77CD0F0B4FBDA31B993A466A /* cef_process_util_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_process_util_capi.h; path = ../libs/CEF/include/capi/cef_process_util_capi.h; sourceTree = SOURCE_ROOT; };
+		77F4E47266CFD2A4A1CB1BCF /* cef_stream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_stream.h; path = ../libs/CEF/include/cef_stream.h; sourceTree = SOURCE_ROOT; };
+		791114CD478A8E30EC7E51C6 /* cef_frame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_frame.h; path = ../libs/CEF/include/cef_frame.h; sourceTree = SOURCE_ROOT; };
+		7A5C718882300B2D97BCC92A /* cef_frame_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_frame_capi.h; path = ../libs/CEF/include/capi/cef_frame_capi.h; sourceTree = SOURCE_ROOT; };
+		7B2C0BCEEB004BB027509E23 /* cef_zip_reader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_zip_reader.h; path = ../libs/CEF/include/cef_zip_reader.h; sourceTree = SOURCE_ROOT; };
+		7B4C4E7C233C51881DBBD6ED /* cef_callback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_callback.h; path = ../libs/CEF/include/base/cef_callback.h; sourceTree = SOURCE_ROOT; };
+		7BEA0393CE33C1E675D58F36 /* cef_lock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_lock.h; path = ../libs/CEF/include/base/cef_lock.h; sourceTree = SOURCE_ROOT; };
+		7C0624103091C5A20C18CE00 /* cef_resource_bundle_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_resource_bundle_handler.h; path = ../libs/CEF/include/cef_resource_bundle_handler.h; sourceTree = SOURCE_ROOT; };
+		7CAB52AA7E300EBDE7A61CF6 /* cef_bind.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_bind.h; path = ../libs/CEF/include/base/cef_bind.h; sourceTree = SOURCE_ROOT; };
+		7F62621D4E5EC92E6DFA3A76 /* cef_menu_model_delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_menu_model_delegate.h; path = ../libs/CEF/include/cef_menu_model_delegate.h; sourceTree = SOURCE_ROOT; };
+		80F188AF1FDD2ED34BDC539B /* cef_command_line.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_command_line.h; path = ../libs/CEF/include/cef_command_line.h; sourceTree = SOURCE_ROOT; };
+		81AE7629F494ED88AE6CFFE7 /* cef_callback_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_callback_capi.h; path = ../libs/CEF/include/capi/cef_callback_capi.h; sourceTree = SOURCE_ROOT; };
+		81B7DDB09EAF5A385EE768D8 /* cef_message_router.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_message_router.h; path = ../libs/CEF/include/wrapper/cef_message_router.h; sourceTree = SOURCE_ROOT; };
+		8263412B474F6BC30B0860BC /* cef_platform_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_platform_thread.h; path = ../libs/CEF/include/base/cef_platform_thread.h; sourceTree = SOURCE_ROOT; };
+		8278693E9BC9669382C702CA /* cef_web_plugin_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_web_plugin_capi.h; path = ../libs/CEF/include/capi/cef_web_plugin_capi.h; sourceTree = SOURCE_ROOT; };
+		838124A02D4D44E1B5ACE981 /* cef_label_button_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_label_button_capi.h; path = ../libs/CEF/include/capi/views/cef_label_button_capi.h; sourceTree = SOURCE_ROOT; };
+		84BA79C2C6EB86F0DC6DA60F /* cef_browser_view_delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_browser_view_delegate.h; path = ../libs/CEF/include/views/cef_browser_view_delegate.h; sourceTree = SOURCE_ROOT; };
+		858F9D865013D3464D0DAAA2 /* cef_dom_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_dom_capi.h; path = ../libs/CEF/include/capi/cef_dom_capi.h; sourceTree = SOURCE_ROOT; };
+		87906015D22DDE193453F99D /* cef_string16.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string16.h; path = ../libs/CEF/include/base/cef_string16.h; sourceTree = SOURCE_ROOT; };
+		8934C685BA7EC2FBB9874076 /* cef_download_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_download_handler.h; path = ../libs/CEF/include/cef_download_handler.h; sourceTree = SOURCE_ROOT; };
+		89AD4DFAC7F42E57B775AA47 /* ofxCEFClientApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxCEFClientApp.cpp; path = ../src/ofxCEFClientApp.cpp; sourceTree = SOURCE_ROOT; };
+		8FA3CF8657971FE3AC570A7E /* cef_textfield.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_textfield.h; path = ../libs/CEF/include/views/cef_textfield.h; sourceTree = SOURCE_ROOT; };
+		8FFA683CDCBDC4ACF286CC03 /* cef_dialog_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_dialog_handler.h; path = ../libs/CEF/include/cef_dialog_handler.h; sourceTree = SOURCE_ROOT; };
+		90157DAF59106440D42488C8 /* cef_string_visitor_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string_visitor_capi.h; path = ../libs/CEF/include/capi/cef_string_visitor_capi.h; sourceTree = SOURCE_ROOT; };
+		91570521C6DAD94C3E64E3CC /* cef_display_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_display_handler_capi.h; path = ../libs/CEF/include/capi/cef_display_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		91D8D4541BE5328C97565059 /* cef_task.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_task.h; path = ../libs/CEF/include/cef_task.h; sourceTree = SOURCE_ROOT; };
+		9241577F206204E60D45C227 /* cef_resource_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_resource_handler.h; path = ../libs/CEF/include/cef_resource_handler.h; sourceTree = SOURCE_ROOT; };
+		9306AD217489B0FA9A38229A /* cef_base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_base.h; path = ../libs/CEF/include/cef_base.h; sourceTree = SOURCE_ROOT; };
+		93D2C009A042E8D421325E6D /* cef_button_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_button_capi.h; path = ../libs/CEF/include/capi/views/cef_button_capi.h; sourceTree = SOURCE_ROOT; };
+		948DE815A8BF54F8DEFA9E1F /* cef_process_message_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_process_message_capi.h; path = ../libs/CEF/include/capi/cef_process_message_capi.h; sourceTree = SOURCE_ROOT; };
+		952EB1534EAF7C8DE3B57788 /* cef_menu_button_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_menu_button_delegate_capi.h; path = ../libs/CEF/include/capi/views/cef_menu_button_delegate_capi.h; sourceTree = SOURCE_ROOT; };
+		96D6915BB2294537803E0185 /* cef_view.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_view.h; path = ../libs/CEF/include/views/cef_view.h; sourceTree = SOURCE_ROOT; };
+		97F9AF61EAFFB1E029F47450 /* cef_print_settings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_print_settings.h; path = ../libs/CEF/include/cef_print_settings.h; sourceTree = SOURCE_ROOT; };
+		98D1A29C98272E39CA39538A /* cef_process_message.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_process_message.h; path = ../libs/CEF/include/cef_process_message.h; sourceTree = SOURCE_ROOT; };
+		9927EB77BDC867AAF562F78C /* cef_resource_manager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_resource_manager.h; path = ../libs/CEF/include/wrapper/cef_resource_manager.h; sourceTree = SOURCE_ROOT; };
+		9A4CF30462824A4DE272A799 /* cef_view_delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_view_delegate.h; path = ../libs/CEF/include/views/cef_view_delegate.h; sourceTree = SOURCE_ROOT; };
+		9B6C2C911ED0C14AF9F0DDF2 /* cef_focus_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_focus_handler.h; path = ../libs/CEF/include/cef_focus_handler.h; sourceTree = SOURCE_ROOT; };
+		9C5A594FFF0CF75A526B32D0 /* cef_display_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_display_handler.h; path = ../libs/CEF/include/cef_display_handler.h; sourceTree = SOURCE_ROOT; };
+		9E05EDC71C22639135EEFB53 /* cef_translator_test.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_translator_test.h; path = ../libs/CEF/include/test/cef_translator_test.h; sourceTree = SOURCE_ROOT; };
+		9E3A5E64A6866572D63818ED /* cef_string_map.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string_map.h; path = ../libs/CEF/include/internal/cef_string_map.h; sourceTree = SOURCE_ROOT; };
+		A2CD5DFD8AC000CF28A036B3 /* cef_x509_certificate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_x509_certificate_capi.h; path = ../libs/CEF/include/capi/cef_x509_certificate_capi.h; sourceTree = SOURCE_ROOT; };
+		A34C82298C99D534EFCBAEF6 /* cef_string_types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string_types.h; path = ../libs/CEF/include/internal/cef_string_types.h; sourceTree = SOURCE_ROOT; };
+		A3F5B729945F7F754225BD67 /* cef_download_item.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_download_item.h; path = ../libs/CEF/include/cef_download_item.h; sourceTree = SOURCE_ROOT; };
+		A50B09AC3F2FEE06AB5B6C9C /* cef_resource_bundle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_resource_bundle.h; path = ../libs/CEF/include/cef_resource_bundle.h; sourceTree = SOURCE_ROOT; };
+		A6014F268C4227B0B1546C52 /* cef_render_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_render_handler.h; path = ../libs/CEF/include/cef_render_handler.h; sourceTree = SOURCE_ROOT; };
+		A66B5B186428C7BC4C250E54 /* cef_bind_helpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_bind_helpers.h; path = ../libs/CEF/include/base/cef_bind_helpers.h; sourceTree = SOURCE_ROOT; };
+		A7CF3F278607EEEE6C1FE62A /* cef_base_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_base_capi.h; path = ../libs/CEF/include/capi/cef_base_capi.h; sourceTree = SOURCE_ROOT; };
+		A8033F325134FD6F182AE61C /* cef_trace_event.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_trace_event.h; path = ../libs/CEF/include/base/cef_trace_event.h; sourceTree = SOURCE_ROOT; };
+		A91CC28545098FA8C6A01192 /* cef_ref_counted.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_ref_counted.h; path = ../libs/CEF/include/base/cef_ref_counted.h; sourceTree = SOURCE_ROOT; };
+		A964E8C2A56E5BDCE6DCFBB4 /* cef_browser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_browser.h; path = ../libs/CEF/include/cef_browser.h; sourceTree = SOURCE_ROOT; };
+		A9BDC8EE3E9F23D5FAF5A00D /* cef_box_layout_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_box_layout_capi.h; path = ../libs/CEF/include/capi/views/cef_box_layout_capi.h; sourceTree = SOURCE_ROOT; };
+		AB29C229420ED599A4CA2553 /* cef_panel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_panel.h; path = ../libs/CEF/include/views/cef_panel.h; sourceTree = SOURCE_ROOT; };
+		AB56A16B3B927E61C553D918 /* cef_resource_bundle_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_resource_bundle_capi.h; path = ../libs/CEF/include/capi/cef_resource_bundle_capi.h; sourceTree = SOURCE_ROOT; };
+		ACCF44873905B50288EF13A9 /* cef_types_wrappers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_types_wrappers.h; path = ../libs/CEF/include/internal/cef_types_wrappers.h; sourceTree = SOURCE_ROOT; };
+		AD94A62B2296394EF2929A26 /* cef_origin_whitelist_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_origin_whitelist_capi.h; path = ../libs/CEF/include/capi/cef_origin_whitelist_capi.h; sourceTree = SOURCE_ROOT; };
+		AE18C2E85CAC09812819290F /* cef_urlrequest.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_urlrequest.h; path = ../libs/CEF/include/cef_urlrequest.h; sourceTree = SOURCE_ROOT; };
+		AE4907E153D78226BB4B0695 /* cef_textfield_delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_textfield_delegate.h; path = ../libs/CEF/include/views/cef_textfield_delegate.h; sourceTree = SOURCE_ROOT; };
+		AE9B45ABB3C3EAAF167A3CAD /* cef_atomicops_atomicword_compat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_atomicops_atomicword_compat.h; path = ../libs/CEF/include/base/internal/cef_atomicops_atomicword_compat.h; sourceTree = SOURCE_ROOT; };
+		AEAC21FBDBD54D9F04B7E99A /* cef_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_thread.h; path = ../libs/CEF/include/cef_thread.h; sourceTree = SOURCE_ROOT; };
+		AF4312F520806A18A6E0DBC0 /* cef_geolocation_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_geolocation_handler_capi.h; path = ../libs/CEF/include/capi/cef_geolocation_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		AFAD2352A88680459A835D1E /* cef_drag_data_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_drag_data_capi.h; path = ../libs/CEF/include/capi/cef_drag_data_capi.h; sourceTree = SOURCE_ROOT; };
+		B094BFC87D8D2DC065A28412 /* cef_ssl_info_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_ssl_info_capi.h; path = ../libs/CEF/include/capi/cef_ssl_info_capi.h; sourceTree = SOURCE_ROOT; };
+		B0FF1049AFA1FD88EB5D9246 /* cef_raw_scoped_refptr_mismatch_checker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_raw_scoped_refptr_mismatch_checker.h; path = ../libs/CEF/include/base/internal/cef_raw_scoped_refptr_mismatch_checker.h; sourceTree = SOURCE_ROOT; };
+		B1BCE7C57E0B9C6676E764E0 /* ofxCEF.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCEF.h; path = ../src/ofxCEF.h; sourceTree = SOURCE_ROOT; };
+		B1C098A975DB259EABABC626 /* cef_helpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_helpers.h; path = ../libs/CEF/include/wrapper/cef_helpers.h; sourceTree = SOURCE_ROOT; };
+		B3121FA4A9A643D25AE844ED /* ofxCEFV8ExtensionHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCEFV8ExtensionHandler.h; path = ../src/ofxCEFV8ExtensionHandler.h; sourceTree = SOURCE_ROOT; };
+		B3E5436416F5E5D828DEB393 /* cef_logging.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_logging.h; path = ../libs/CEF/include/base/cef_logging.h; sourceTree = SOURCE_ROOT; };
+		B470EFE493DD205060E4B781 /* cef_process_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_process_util.h; path = ../libs/CEF/include/cef_process_util.h; sourceTree = SOURCE_ROOT; };
+		B5C8B3BE03EA53B0B886EA2F /* cef_version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_version.h; path = ../libs/CEF/include/cef_version.h; sourceTree = SOURCE_ROOT; };
+		B61C869BB87981E7E00372B9 /* ofxCEF.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxCEF.cpp; path = ../src/ofxCEF.cpp; sourceTree = SOURCE_ROOT; };
+		B780BAA8374E909321D973EC /* cef_app.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_app.h; path = ../libs/CEF/include/cef_app.h; sourceTree = SOURCE_ROOT; };
+		B85ABDC1CBCB05CA0E2D7B0C /* cef_v8.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_v8.h; path = ../libs/CEF/include/cef_v8.h; sourceTree = SOURCE_ROOT; };
+		BA0FCEFAA8EBDB9406AF70E9 /* cef_scoped_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_scoped_ptr.h; path = ../libs/CEF/include/base/cef_scoped_ptr.h; sourceTree = SOURCE_ROOT; };
+		BB0C1CFBBF750F120AFFC8EE /* cef_request_context_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_request_context_capi.h; path = ../libs/CEF/include/capi/cef_request_context_capi.h; sourceTree = SOURCE_ROOT; };
+		BB294CE09D04FB8171ECB175 /* cef_request_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_request_capi.h; path = ../libs/CEF/include/capi/cef_request_capi.h; sourceTree = SOURCE_ROOT; };
+		BE1A4646BCFBF6B7D2F3664C /* cef_download_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_download_handler_capi.h; path = ../libs/CEF/include/capi/cef_download_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		BE39B316B633F3A71E8A5ECE /* cef_geolocation_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_geolocation_capi.h; path = ../libs/CEF/include/capi/cef_geolocation_capi.h; sourceTree = SOURCE_ROOT; };
+		C001E8A46248F1A60BE5D8D8 /* cef_xml_reader_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_xml_reader_capi.h; path = ../libs/CEF/include/capi/cef_xml_reader_capi.h; sourceTree = SOURCE_ROOT; };
+		C19F598D2FAF984A71ADFB6C /* cef_export.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_export.h; path = ../libs/CEF/include/internal/cef_export.h; sourceTree = SOURCE_ROOT; };
+		C1BD0ACF4FA0F425F6A56D56 /* cef_path_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_path_util.h; path = ../libs/CEF/include/cef_path_util.h; sourceTree = SOURCE_ROOT; };
+		C37AE67B954AF09F48810AA0 /* cef_weak_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_weak_ptr.h; path = ../libs/CEF/include/base/cef_weak_ptr.h; sourceTree = SOURCE_ROOT; };
+		C47D8FF6295182CA224ECAAF /* cef_parser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_parser.h; path = ../libs/CEF/include/cef_parser.h; sourceTree = SOURCE_ROOT; };
+		C5011A563407A3BD455A93EE /* cef_callback_list.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_callback_list.h; path = ../libs/CEF/include/base/cef_callback_list.h; sourceTree = SOURCE_ROOT; };
+		C638E69FFCBCE7E4F31A1136 /* cef_menu_button_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_menu_button_capi.h; path = ../libs/CEF/include/capi/views/cef_menu_button_capi.h; sourceTree = SOURCE_ROOT; };
+		C86337DC3CF5098CF1A7FF7F /* cef_callback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_callback.h; path = ../libs/CEF/include/cef_callback.h; sourceTree = SOURCE_ROOT; };
+		CCABEBA2552B5B2517AD0B7F /* cef_file_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_file_util.h; path = ../libs/CEF/include/cef_file_util.h; sourceTree = SOURCE_ROOT; };
+		CD05B1474FD7465BCDB95261 /* cef_window_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_window_delegate_capi.h; path = ../libs/CEF/include/capi/views/cef_window_delegate_capi.h; sourceTree = SOURCE_ROOT; };
+		CD92B59266A8CF40D0CD8728 /* cef_response_filter_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_response_filter_capi.h; path = ../libs/CEF/include/capi/cef_response_filter_capi.h; sourceTree = SOURCE_ROOT; };
+		D03CD134FE50954795B73C63 /* cef_web_plugin.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_web_plugin.h; path = ../libs/CEF/include/cef_web_plugin.h; sourceTree = SOURCE_ROOT; };
+		D0F484F6824945CC19EF5414 /* cef_cookie_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_cookie_capi.h; path = ../libs/CEF/include/capi/cef_cookie_capi.h; sourceTree = SOURCE_ROOT; };
+		D1BF5301D82D247B9F840C2D /* cef_stream_resource_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_stream_resource_handler.h; path = ../libs/CEF/include/wrapper/cef_stream_resource_handler.h; sourceTree = SOURCE_ROOT; };
+		D34ECE1A0A542CFBA9F20D57 /* cef_string_wrappers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string_wrappers.h; path = ../libs/CEF/include/internal/cef_string_wrappers.h; sourceTree = SOURCE_ROOT; };
+		D3B89EC3235A0FA7CE8E35FF /* cef_v8_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_v8_capi.h; path = ../libs/CEF/include/capi/cef_v8_capi.h; sourceTree = SOURCE_ROOT; };
+		D4A8087BDD945D24FBC87D7C /* cef_string.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_string.h; path = ../libs/CEF/include/internal/cef_string.h; sourceTree = SOURCE_ROOT; };
+		D746E1662A28A4E322AD48F8 /* cef_trace.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_trace.h; path = ../libs/CEF/include/cef_trace.h; sourceTree = SOURCE_ROOT; };
+		D9BF70B7CAAED82AAD485098 /* cef_view_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_view_capi.h; path = ../libs/CEF/include/capi/views/cef_view_capi.h; sourceTree = SOURCE_ROOT; };
+		DA44807000FEBE9E817EEA77 /* cef_command_line_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_command_line_capi.h; path = ../libs/CEF/include/capi/cef_command_line_capi.h; sourceTree = SOURCE_ROOT; };
+		DBF8B1D889F69391748455A2 /* cef_x509_certificate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_x509_certificate.h; path = ../libs/CEF/include/cef_x509_certificate.h; sourceTree = SOURCE_ROOT; };
+		DEB7E370DAEA96B07566907D /* cef_render_process_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_render_process_handler_capi.h; path = ../libs/CEF/include/capi/cef_render_process_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		DF5705DDEB4047876F195C2F /* cef_scroll_view_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_scroll_view_capi.h; path = ../libs/CEF/include/capi/views/cef_scroll_view_capi.h; sourceTree = SOURCE_ROOT; };
+		E11F665FF14CF03519494FB7 /* ofxCEFRenderHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ofxCEFRenderHandler.cpp; path = ../src/ofxCEFRenderHandler.cpp; sourceTree = SOURCE_ROOT; };
+		E2CB6F3196C2D9B0DA81F16D /* process_helper_mac.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = process_helper_mac.cpp; path = ../src/process_helper_mac.cpp; sourceTree = SOURCE_ROOT; };
+		E2F59AD1091D7B3C0018373B /* cef_life_span_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_life_span_handler_capi.h; path = ../libs/CEF/include/capi/cef_life_span_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		E343A1D3C31B5BF1B186DE85 /* cef_pack_strings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_pack_strings.h; path = ../libs/CEF/include/cef_pack_strings.h; sourceTree = SOURCE_ROOT; };
+		E35A36C3BC4E82F6B6A1E98D /* cef_fill_layout.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_fill_layout.h; path = ../libs/CEF/include/views/cef_fill_layout.h; sourceTree = SOURCE_ROOT; };
+		E374B73DC6E1075484990903 /* cef_zip_reader_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_zip_reader_capi.h; path = ../libs/CEF/include/capi/cef_zip_reader_capi.h; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E6FB457E859D644678218ACD /* cef_parser_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_parser_capi.h; path = ../libs/CEF/include/capi/cef_parser_capi.h; sourceTree = SOURCE_ROOT; };
+		E7F3208DFB66B58191236B8C /* cef_print_settings_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_print_settings_capi.h; path = ../libs/CEF/include/capi/cef_print_settings_capi.h; sourceTree = SOURCE_ROOT; };
+		EA6910D96B4B14C2D00D404C /* cef_xml_object.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_xml_object.h; path = ../libs/CEF/include/wrapper/cef_xml_object.h; sourceTree = SOURCE_ROOT; };
+		EABB6EB74FD6023548434A29 /* cef_thread_checker_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_thread_checker_impl.h; path = ../libs/CEF/include/base/internal/cef_thread_checker_impl.h; sourceTree = SOURCE_ROOT; };
+		ECCDD24CD2EC39374D2B96EE /* cef_navigation_entry_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_navigation_entry_capi.h; path = ../libs/CEF/include/capi/cef_navigation_entry_capi.h; sourceTree = SOURCE_ROOT; };
+		EF02D317FA03F79BAB7417C2 /* cef_bind_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_bind_internal.h; path = ../libs/CEF/include/base/internal/cef_bind_internal.h; sourceTree = SOURCE_ROOT; };
+		EFFFE2F4C544ECDF39900113 /* ofxCEFClientApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxCEFClientApp.h; path = ../src/ofxCEFClientApp.h; sourceTree = SOURCE_ROOT; };
+		F07CAD3A4548C602DAD6E20B /* cef_render_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_render_handler_capi.h; path = ../libs/CEF/include/capi/cef_render_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		F1DFED66753548FD8BD26E8D /* cef_panel_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_panel_delegate_capi.h; path = ../libs/CEF/include/capi/views/cef_panel_delegate_capi.h; sourceTree = SOURCE_ROOT; };
+		F354C245A09A95F939497855 /* cef_request_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_request_context.h; path = ../libs/CEF/include/cef_request_context.h; sourceTree = SOURCE_ROOT; };
+		F50E548318CED5A68B29E1ED /* cef_textfield_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_textfield_capi.h; path = ../libs/CEF/include/capi/views/cef_textfield_capi.h; sourceTree = SOURCE_ROOT; };
+		F6E736DE5AAE8B5872CE5B01 /* cef_request.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_request.h; path = ../libs/CEF/include/cef_request.h; sourceTree = SOURCE_ROOT; };
+		F6FC57B82AF36C2D33F44BEB /* cef_trace_event_internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_trace_event_internal.h; path = ../libs/CEF/include/internal/cef_trace_event_internal.h; sourceTree = SOURCE_ROOT; };
+		F749C9C54A5ADEFA2C8780B6 /* cef_stream_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_stream_capi.h; path = ../libs/CEF/include/capi/cef_stream_capi.h; sourceTree = SOURCE_ROOT; };
+		F74E193CB74F5EAA6C552F5B /* cef_drag_handler_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_drag_handler_capi.h; path = ../libs/CEF/include/capi/cef_drag_handler_capi.h; sourceTree = SOURCE_ROOT; };
+		F7F6AA97FE4A8E2AE00D4491 /* cef_view_delegate_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_view_delegate_capi.h; path = ../libs/CEF/include/capi/views/cef_view_delegate_capi.h; sourceTree = SOURCE_ROOT; };
+		F967CDE79ABA5267BD6B0D2F /* cef_trace_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_trace_capi.h; path = ../libs/CEF/include/capi/cef_trace_capi.h; sourceTree = SOURCE_ROOT; };
+		FA5376D6DF22EC5951146499 /* cef_find_handler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_find_handler.h; path = ../libs/CEF/include/cef_find_handler.h; sourceTree = SOURCE_ROOT; };
+		FB6FE54BB161EBF48278E544 /* cef_dom.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_dom.h; path = ../libs/CEF/include/cef_dom.h; sourceTree = SOURCE_ROOT; };
+		FC88EDD2EEB2CDC3B428B9DA /* cef_translator_test_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_translator_test_capi.h; path = ../libs/CEF/include/capi/test/cef_translator_test_capi.h; sourceTree = SOURCE_ROOT; };
+		FDF1AF02EDDF3203C88DEA1E /* cef_ssl_status.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_ssl_status.h; path = ../libs/CEF/include/cef_ssl_status.h; sourceTree = SOURCE_ROOT; };
+		FFA00BF629954EC07BE06DD9 /* cef_scroll_view.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_scroll_view.h; path = ../libs/CEF/include/views/cef_scroll_view.h; sourceTree = SOURCE_ROOT; };
+		FFCFA03F5EA7A76D860DCB05 /* cef_file_util_capi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_file_util_capi.h; path = ../libs/CEF/include/capi/cef_file_util_capi.h; sourceTree = SOURCE_ROOT; };
+		FFD98EBA9B2E89605C365D5C /* cef_tuple.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cef_tuple.h; path = ../libs/CEF/include/base/cef_tuple.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		412C18231F95F89200E2B940 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				412C18251F95F89200E2B940 /* Chromium Embedded Framework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089010574C9F9D9DBD76A7BD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				6A7C1240F4CC8594F3C1BEB1 /* osx */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		0EC0B8D3910FB4FF2F2548E1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B61C869BB87981E7E00372B9 /* ofxCEF.cpp */,
+				B1BCE7C57E0B9C6676E764E0 /* ofxCEF.h */,
+				3143840145828E4E66F563B6 /* ofxCEFBrowserClient.cpp */,
+				0AE3262580C47405CB26E38B /* ofxCEFBrowserClient.h */,
+				89AD4DFAC7F42E57B775AA47 /* ofxCEFClientApp.cpp */,
+				EFFFE2F4C544ECDF39900113 /* ofxCEFClientApp.h */,
+				E11F665FF14CF03519494FB7 /* ofxCEFRenderHandler.cpp */,
+				0C3DC7A3FFFF369BF286F29D /* ofxCEFRenderHandler.h */,
+				3379499ACE8BED89F23E2F5E /* ofxCEFV8ExtensionHandler.cpp */,
+				B3121FA4A9A643D25AE844ED /* ofxCEFV8ExtensionHandler.h */,
+				412C18331F960C4000E2B940 /* cefListV8Converter.cpp */,
+				412C18341F960C4000E2B940 /* cefListV8Converter.hpp */,
+				E2CB6F3196C2D9B0DA81F16D /* process_helper_mac.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		0F90403C9A4BAB61A4FE6812 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				FC88EDD2EEB2CDC3B428B9DA /* cef_translator_test_capi.h */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		1975E104CAAA563515AA558E /* test */ = {
+			isa = PBXGroup;
+			children = (
+				9E05EDC71C22639135EEFB53 /* cef_translator_test.h */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
+		28D7F6B6165F2AE5DBE02D14 /* cef */ = {
+			isa = PBXGroup;
+			children = (
+				EB7A3F2BF75F7D38C4191CEC /* include */,
+				089010574C9F9D9DBD76A7BD /* lib */,
+			);
+			name = cef;
+			sourceTree = "<group>";
+		};
+		43E93A91E2B36934B9AC0F41 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				AE9B45ABB3C3EAAF167A3CAD /* cef_atomicops_atomicword_compat.h */,
+				50D28E29580015D5AC2C85E4 /* cef_atomicops_mac.h */,
+				EF02D317FA03F79BAB7417C2 /* cef_bind_internal.h */,
+				648DEAD0C5E90DC0FD2F3996 /* cef_callback_internal.h */,
+				1B9C62A4DB587ACCDF641086 /* cef_lock_impl.h */,
+				B0FF1049AFA1FD88EB5D9246 /* cef_raw_scoped_refptr_mismatch_checker.h */,
+				EABB6EB74FD6023548434A29 /* cef_thread_checker_impl.h */,
+			);
+			name = internal;
+			sourceTree = "<group>";
+		};
+		5295F6A07F3084015105AEBE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				A9BDC8EE3E9F23D5FAF5A00D /* cef_box_layout_capi.h */,
+				709249AD4B4EE086C6263E45 /* cef_browser_view_capi.h */,
+				0CD43EE3962AED5065E9C3BF /* cef_browser_view_delegate_capi.h */,
+				93D2C009A042E8D421325E6D /* cef_button_capi.h */,
+				134ECD9508E4F52B4E9FD219 /* cef_button_delegate_capi.h */,
+				4B9582027B920B8C59B8AB9E /* cef_display_capi.h */,
+				1B2D11DA404B8837D4E4D64D /* cef_fill_layout_capi.h */,
+				838124A02D4D44E1B5ACE981 /* cef_label_button_capi.h */,
+				017E16E2C4B8299743C254B7 /* cef_layout_capi.h */,
+				C638E69FFCBCE7E4F31A1136 /* cef_menu_button_capi.h */,
+				952EB1534EAF7C8DE3B57788 /* cef_menu_button_delegate_capi.h */,
+				2925A8C13AEDB281B815571C /* cef_panel_capi.h */,
+				F1DFED66753548FD8BD26E8D /* cef_panel_delegate_capi.h */,
+				DF5705DDEB4047876F195C2F /* cef_scroll_view_capi.h */,
+				F50E548318CED5A68B29E1ED /* cef_textfield_capi.h */,
+				664680A952F7CBAF70530210 /* cef_textfield_delegate_capi.h */,
+				D9BF70B7CAAED82AAD485098 /* cef_view_capi.h */,
+				F7F6AA97FE4A8E2AE00D4491 /* cef_view_delegate_capi.h */,
+				2CAAA34EE80DB4ACC4C5306A /* cef_window_capi.h */,
+				CD05B1474FD7465BCDB95261 /* cef_window_delegate_capi.h */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		6948EE371B920CB800B5AC1A /* local_addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = local_addons;
+			sourceTree = "<group>";
+		};
+		6A7C1240F4CC8594F3C1BEB1 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				419E8BEA1EAF91C6001970BA /* cefclient Helper.app */,
+				676C60DA887A77C13D96A1B0 /* Chromium Embedded Framework.framework */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
+		6B29814DF64C7978AEF36735 /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				C19F598D2FAF984A71ADFB6C /* cef_export.h */,
+				059300C27320B4260EEC4FFB /* cef_logging_internal.h */,
+				4D94F1D1DBC9EEC7F3D81FFB /* cef_mac.h */,
+				2563B284BE4063E2A3BAEC3B /* cef_ptr.h */,
+				D4A8087BDD945D24FBC87D7C /* cef_string.h */,
+				648A35182AE01AEBC10EB168 /* cef_string_list.h */,
+				9E3A5E64A6866572D63818ED /* cef_string_map.h */,
+				2C74ADA1533A962430AFD0D7 /* cef_string_multimap.h */,
+				A34C82298C99D534EFCBAEF6 /* cef_string_types.h */,
+				D34ECE1A0A542CFBA9F20D57 /* cef_string_wrappers.h */,
+				059AA750DCA8C3833EA24BC8 /* cef_thread_internal.h */,
+				22AB56E43254814FE4460E95 /* cef_time.h */,
+				F6FC57B82AF36C2D33F44BEB /* cef_trace_event_internal.h */,
+				1E7C0BDF75386AD873677DD9 /* cef_types.h */,
+				2AFC60A383F139CB1F605861 /* cef_types_mac.h */,
+				ACCF44873905B50288EF13A9 /* cef_types_wrappers.h */,
+			);
+			name = internal;
+			sourceTree = "<group>";
+		};
+		6D0B478D53419D7AF2C2D1AE /* ofxCef */ = {
+			isa = PBXGroup;
+			children = (
+				0EC0B8D3910FB4FF2F2548E1 /* src */,
+				9865EE8A64E4FA2C953C5100 /* libs */,
+			);
+			name = ofxCef;
+			sourceTree = "<group>";
+		};
+		9865EE8A64E4FA2C953C5100 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				28D7F6B6165F2AE5DBE02D14 /* cef */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		BB23A70021CBD18944027DCE /* base */ = {
+			isa = PBXGroup;
+			children = (
+				104AC27D6D3D6FF146611523 /* cef_atomic_ref_count.h */,
+				76010F48767E8729B89FB6E9 /* cef_atomicops.h */,
+				334127ACD4FE80EFD16B87B5 /* cef_basictypes.h */,
+				7CAB52AA7E300EBDE7A61CF6 /* cef_bind.h */,
+				A66B5B186428C7BC4C250E54 /* cef_bind_helpers.h */,
+				50314BC1D32D0291D19773D6 /* cef_build.h */,
+				7B4C4E7C233C51881DBBD6ED /* cef_callback.h */,
+				00A8105CE56A23A4C633630A /* cef_callback_forward.h */,
+				4E662E2BE8FA3F3CD8627E79 /* cef_callback_helpers.h */,
+				C5011A563407A3BD455A93EE /* cef_callback_list.h */,
+				60E6702B2899022E7917CCCE /* cef_cancelable_callback.h */,
+				7BEA0393CE33C1E675D58F36 /* cef_lock.h */,
+				B3E5436416F5E5D828DEB393 /* cef_logging.h */,
+				5FF69BDDC0662438F8085A5A /* cef_macros.h */,
+				0845B85888A04020814C173C /* cef_move.h */,
+				8263412B474F6BC30B0860BC /* cef_platform_thread.h */,
+				A91CC28545098FA8C6A01192 /* cef_ref_counted.h */,
+				BA0FCEFAA8EBDB9406AF70E9 /* cef_scoped_ptr.h */,
+				87906015D22DDE193453F99D /* cef_string16.h */,
+				48B6A5B3593B0BBB3650B43A /* cef_template_util.h */,
+				6D6431CF3803CA041DC14D39 /* cef_thread_checker.h */,
+				389B7DFBEF093DA208D44B05 /* cef_thread_collision_warner.h */,
+				A8033F325134FD6F182AE61C /* cef_trace_event.h */,
+				FFD98EBA9B2E89605C365D5C /* cef_tuple.h */,
+				C37AE67B954AF09F48810AA0 /* cef_weak_ptr.h */,
+				43E93A91E2B36934B9AC0F41 /* internal */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				6D0B478D53419D7AF2C2D1AE /* ofxCef */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		CC85CBFE02F60B4572AC5890 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5448DBA53F3ABDC880631289 /* cef_box_layout.h */,
+				3F493CAE36A0A340083C98E6 /* cef_browser_view.h */,
+				84BA79C2C6EB86F0DC6DA60F /* cef_browser_view_delegate.h */,
+				5C496F327ADD217E1DC27F0D /* cef_button.h */,
+				02F78BAEDBB86570BA2588BC /* cef_button_delegate.h */,
+				1C49AD81E3996416CD438722 /* cef_display.h */,
+				E35A36C3BC4E82F6B6A1E98D /* cef_fill_layout.h */,
+				3C7D24056C6346BA9C5AA5E3 /* cef_label_button.h */,
+				40C4C7E93D0AC8CFA8C233FA /* cef_layout.h */,
+				508464688AB39F14B94C2657 /* cef_menu_button.h */,
+				6A13FCE8988DE4E6D169F272 /* cef_menu_button_delegate.h */,
+				AB29C229420ED599A4CA2553 /* cef_panel.h */,
+				6C7735FA9C6495D2EA75773E /* cef_panel_delegate.h */,
+				FFA00BF629954EC07BE06DD9 /* cef_scroll_view.h */,
+				8FA3CF8657971FE3AC570A7E /* cef_textfield.h */,
+				AE4907E153D78226BB4B0695 /* cef_textfield_delegate.h */,
+				96D6915BB2294537803E0185 /* cef_view.h */,
+				9A4CF30462824A4DE272A799 /* cef_view_delegate.h */,
+				3FFCCF5BFCF4EC58BD956489 /* cef_window.h */,
+				031B6A340DB74F78EBE35147 /* cef_window_delegate.h */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		CE9505ED3A8989AD0727C952 /* wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				226403B84D05BABFA9449E03 /* cef_byte_read_handler.h */,
+				603926EDA9D076FBC432131C /* cef_closure_task.h */,
+				B1C098A975DB259EABABC626 /* cef_helpers.h */,
+				81B7DDB09EAF5A385EE768D8 /* cef_message_router.h */,
+				9927EB77BDC867AAF562F78C /* cef_resource_manager.h */,
+				5036D955357F3411DF16F435 /* cef_scoped_temp_dir.h */,
+				D1BF5301D82D247B9F840C2D /* cef_stream_resource_handler.h */,
+				EA6910D96B4B14C2D00D404C /* cef_xml_object.h */,
+				69DD2B73DA672AF8EDCAE485 /* cef_zip_archive.h */,
+			);
+			name = wrapper;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				6948EE371B920CB800B5AC1A /* local_addons */,
+				412C182E1F95F89200E2B940 /* cef_helper_mac.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		EB7A3F2BF75F7D38C4191CEC /* include */ = {
+			isa = PBXGroup;
+			children = (
+				BB23A70021CBD18944027DCE /* base */,
+				FC392B62E7AF2FF7DD819975 /* capi */,
+				B780BAA8374E909321D973EC /* cef_app.h */,
+				579F61271EEB97F9A5D433BD /* cef_application_mac.h */,
+				4A67BE045428656379914865 /* cef_auth_callback.h */,
+				9306AD217489B0FA9A38229A /* cef_base.h */,
+				A964E8C2A56E5BDCE6DCFBB4 /* cef_browser.h */,
+				250C220D10818B2FA4484A75 /* cef_browser_process_handler.h */,
+				C86337DC3CF5098CF1A7FF7F /* cef_callback.h */,
+				4EE09C32EA75504996C50264 /* cef_client.h */,
+				80F188AF1FDD2ED34BDC539B /* cef_command_line.h */,
+				05ADCC883BC5615B6F177029 /* cef_context_menu_handler.h */,
+				06472639AD85EF051FEA7431 /* cef_cookie.h */,
+				3C0E421EF35AA181EF895B47 /* cef_crash_util.h */,
+				8FFA683CDCBDC4ACF286CC03 /* cef_dialog_handler.h */,
+				9C5A594FFF0CF75A526B32D0 /* cef_display_handler.h */,
+				FB6FE54BB161EBF48278E544 /* cef_dom.h */,
+				8934C685BA7EC2FBB9874076 /* cef_download_handler.h */,
+				A3F5B729945F7F754225BD67 /* cef_download_item.h */,
+				75A38693D65885690FE0A798 /* cef_drag_data.h */,
+				2B8BD4295891913162B8DF70 /* cef_drag_handler.h */,
+				CCABEBA2552B5B2517AD0B7F /* cef_file_util.h */,
+				FA5376D6DF22EC5951146499 /* cef_find_handler.h */,
+				9B6C2C911ED0C14AF9F0DDF2 /* cef_focus_handler.h */,
+				791114CD478A8E30EC7E51C6 /* cef_frame.h */,
+				4A4BFCD1008F4FF5D351DCBF /* cef_geolocation.h */,
+				4E0F5AB39E6B1884FEFC76E6 /* cef_geolocation_handler.h */,
+				61293345140F13151C1CBE63 /* cef_image.h */,
+				3BFE095A29B0BBEC8627C01D /* cef_jsdialog_handler.h */,
+				46F32FD28C3646EC96B69230 /* cef_keyboard_handler.h */,
+				439DF123438C870E5C8AFED2 /* cef_life_span_handler.h */,
+				10DE145D13551CBD88AD97D9 /* cef_load_handler.h */,
+				34C1CDEDC38C102B81E8494A /* cef_menu_model.h */,
+				7F62621D4E5EC92E6DFA3A76 /* cef_menu_model_delegate.h */,
+				0C093F1B6443E27053D04177 /* cef_navigation_entry.h */,
+				349532B383A38AD87BA7A4E1 /* cef_origin_whitelist.h */,
+				28A105414ED8183C3F15324C /* cef_pack_resources.h */,
+				E343A1D3C31B5BF1B186DE85 /* cef_pack_strings.h */,
+				C47D8FF6295182CA224ECAAF /* cef_parser.h */,
+				C1BD0ACF4FA0F425F6A56D56 /* cef_path_util.h */,
+				57C4446AD7A409567C1E962B /* cef_print_handler.h */,
+				97F9AF61EAFFB1E029F47450 /* cef_print_settings.h */,
+				98D1A29C98272E39CA39538A /* cef_process_message.h */,
+				B470EFE493DD205060E4B781 /* cef_process_util.h */,
+				A6014F268C4227B0B1546C52 /* cef_render_handler.h */,
+				6A7E0328FF995A402DD65977 /* cef_render_process_handler.h */,
+				F6E736DE5AAE8B5872CE5B01 /* cef_request.h */,
+				F354C245A09A95F939497855 /* cef_request_context.h */,
+				1FD43B29A1B7A34812370C68 /* cef_request_context_handler.h */,
+				600D52614EC4E1E71194581C /* cef_request_handler.h */,
+				A50B09AC3F2FEE06AB5B6C9C /* cef_resource_bundle.h */,
+				7C0624103091C5A20C18CE00 /* cef_resource_bundle_handler.h */,
+				9241577F206204E60D45C227 /* cef_resource_handler.h */,
+				3B47AF130DF363B72632ECAE /* cef_response.h */,
+				388C19E9C55DF584C475CE53 /* cef_response_filter.h */,
+				6B5F8F62B3709F8C153081D2 /* cef_scheme.h */,
+				49BE215952E47933C20D6F06 /* cef_ssl_info.h */,
+				FDF1AF02EDDF3203C88DEA1E /* cef_ssl_status.h */,
+				77F4E47266CFD2A4A1CB1BCF /* cef_stream.h */,
+				4A1567AC9B9C51C39F0DB15B /* cef_string_visitor.h */,
+				91D8D4541BE5328C97565059 /* cef_task.h */,
+				AEAC21FBDBD54D9F04B7E99A /* cef_thread.h */,
+				D746E1662A28A4E322AD48F8 /* cef_trace.h */,
+				AE18C2E85CAC09812819290F /* cef_urlrequest.h */,
+				B85ABDC1CBCB05CA0E2D7B0C /* cef_v8.h */,
+				6A6F5A17E5CBAE3741D17F53 /* cef_values.h */,
+				B5C8B3BE03EA53B0B886EA2F /* cef_version.h */,
+				743396C8F905AA5D92C6FDB1 /* cef_waitable_event.h */,
+				D03CD134FE50954795B73C63 /* cef_web_plugin.h */,
+				DBF8B1D889F69391748455A2 /* cef_x509_certificate.h */,
+				719F77935CEF86E0881894A2 /* cef_xml_reader.h */,
+				7B2C0BCEEB004BB027509E23 /* cef_zip_reader.h */,
+				6B29814DF64C7978AEF36735 /* internal */,
+				1975E104CAAA563515AA558E /* test */,
+				CC85CBFE02F60B4572AC5890 /* views */,
+				CE9505ED3A8989AD0727C952 /* wrapper */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		FC392B62E7AF2FF7DD819975 /* capi */ = {
+			isa = PBXGroup;
+			children = (
+				0D07CB8CB6CF01B2BB7408B4 /* cef_app_capi.h */,
+				3E7C109DA77EB56E32C3A24F /* cef_auth_callback_capi.h */,
+				A7CF3F278607EEEE6C1FE62A /* cef_base_capi.h */,
+				154AB519F2F707B68346564B /* cef_browser_capi.h */,
+				247736F75982E305A6F0C7FD /* cef_browser_process_handler_capi.h */,
+				81AE7629F494ED88AE6CFFE7 /* cef_callback_capi.h */,
+				4CC5EE2C018FD1075B98A8DF /* cef_client_capi.h */,
+				DA44807000FEBE9E817EEA77 /* cef_command_line_capi.h */,
+				5472E6535C5787BA2C551CEC /* cef_context_menu_handler_capi.h */,
+				D0F484F6824945CC19EF5414 /* cef_cookie_capi.h */,
+				121B0D8007849FF91345E405 /* cef_crash_util_capi.h */,
+				0B650DDEB39DF966B9DAA237 /* cef_dialog_handler_capi.h */,
+				91570521C6DAD94C3E64E3CC /* cef_display_handler_capi.h */,
+				858F9D865013D3464D0DAAA2 /* cef_dom_capi.h */,
+				BE1A4646BCFBF6B7D2F3664C /* cef_download_handler_capi.h */,
+				16E52E9A6A80705DA7B4F203 /* cef_download_item_capi.h */,
+				AFAD2352A88680459A835D1E /* cef_drag_data_capi.h */,
+				F74E193CB74F5EAA6C552F5B /* cef_drag_handler_capi.h */,
+				FFCFA03F5EA7A76D860DCB05 /* cef_file_util_capi.h */,
+				047C8DAF1B30506877191E84 /* cef_find_handler_capi.h */,
+				5FBB25522DC5F8D647D4623B /* cef_focus_handler_capi.h */,
+				7A5C718882300B2D97BCC92A /* cef_frame_capi.h */,
+				BE39B316B633F3A71E8A5ECE /* cef_geolocation_capi.h */,
+				AF4312F520806A18A6E0DBC0 /* cef_geolocation_handler_capi.h */,
+				3231E0A6CFAC7877742CF12A /* cef_image_capi.h */,
+				50018A028DCD8126C544228A /* cef_jsdialog_handler_capi.h */,
+				186BF04FBA3EC6A11700021C /* cef_keyboard_handler_capi.h */,
+				E2F59AD1091D7B3C0018373B /* cef_life_span_handler_capi.h */,
+				2BF16FEF5614D19912488A40 /* cef_load_handler_capi.h */,
+				65679B700347062AF587D46F /* cef_menu_model_capi.h */,
+				7169E7224E326C4E54C695C1 /* cef_menu_model_delegate_capi.h */,
+				ECCDD24CD2EC39374D2B96EE /* cef_navigation_entry_capi.h */,
+				AD94A62B2296394EF2929A26 /* cef_origin_whitelist_capi.h */,
+				E6FB457E859D644678218ACD /* cef_parser_capi.h */,
+				1498BACB0A03F29EF2669DD1 /* cef_path_util_capi.h */,
+				1C102D9EF9DBCA23FE140ECB /* cef_print_handler_capi.h */,
+				E7F3208DFB66B58191236B8C /* cef_print_settings_capi.h */,
+				948DE815A8BF54F8DEFA9E1F /* cef_process_message_capi.h */,
+				77CD0F0B4FBDA31B993A466A /* cef_process_util_capi.h */,
+				F07CAD3A4548C602DAD6E20B /* cef_render_handler_capi.h */,
+				DEB7E370DAEA96B07566907D /* cef_render_process_handler_capi.h */,
+				BB294CE09D04FB8171ECB175 /* cef_request_capi.h */,
+				BB0C1CFBBF750F120AFFC8EE /* cef_request_context_capi.h */,
+				3840DE048C5FBEAE2CC70E5B /* cef_request_context_handler_capi.h */,
+				0A305D19C6A4B8BEEB6FA998 /* cef_request_handler_capi.h */,
+				AB56A16B3B927E61C553D918 /* cef_resource_bundle_capi.h */,
+				0CCE147FA33FB24788A3CA48 /* cef_resource_bundle_handler_capi.h */,
+				478483E97555F9E10687F4DB /* cef_resource_handler_capi.h */,
+				6F757022354536F97D578C44 /* cef_response_capi.h */,
+				CD92B59266A8CF40D0CD8728 /* cef_response_filter_capi.h */,
+				6C6A6AB283856D6025BB20FC /* cef_scheme_capi.h */,
+				B094BFC87D8D2DC065A28412 /* cef_ssl_info_capi.h */,
+				7280F52F28DEAB3B1FFAAC36 /* cef_ssl_status_capi.h */,
+				F749C9C54A5ADEFA2C8780B6 /* cef_stream_capi.h */,
+				90157DAF59106440D42488C8 /* cef_string_visitor_capi.h */,
+				40B183EE77C90CFBDCCD19F3 /* cef_task_capi.h */,
+				13AD7A9B1246E1E57DA2272E /* cef_thread_capi.h */,
+				F967CDE79ABA5267BD6B0D2F /* cef_trace_capi.h */,
+				650FC4146655FDF53ECC0CC7 /* cef_urlrequest_capi.h */,
+				D3B89EC3235A0FA7CE8E35FF /* cef_v8_capi.h */,
+				3121C241E011CFF75067DFAF /* cef_values_capi.h */,
+				00D150121E6B8DE928112F51 /* cef_waitable_event_capi.h */,
+				8278693E9BC9669382C702CA /* cef_web_plugin_capi.h */,
+				A2CD5DFD8AC000CF28A036B3 /* cef_x509_certificate_capi.h */,
+				C001E8A46248F1A60BE5D8D8 /* cef_xml_reader_capi.h */,
+				E374B73DC6E1075484990903 /* cef_zip_reader_capi.h */,
+				0F90403C9A4BAB61A4FE6812 /* test */,
+				5295F6A07F3084015105AEBE /* views */,
+			);
+			name = capi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		412C18181F95F89200E2B940 /* cef_helper_mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 412C182B1F95F89200E2B940 /* Build configuration list for PBXNativeTarget "cef_helper_mac" */;
+			buildPhases = (
+				412C181B1F95F89200E2B940 /* Sources */,
+				412C18231F95F89200E2B940 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cef_helper_mac;
+			productName = myOFApp;
+			productReference = 412C182E1F95F89200E2B940 /* cef_helper_mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "cef_helper_mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				412C18181F95F89200E2B940 /* cef_helper_mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		412C181B1F95F89200E2B940 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				412C18301F95F8D900E2B940 /* process_helper_mac.cpp in Sources */,
+				412C18201F95F89200E2B940 /* ofxCEFClientApp.cpp in Sources */,
+				412C18221F95F89200E2B940 /* ofxCEFV8ExtensionHandler.cpp in Sources */,
+				412C18361F960C7600E2B940 /* cefListV8Converter.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		412C182C1F95F89200E2B940 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../libs/cef/lib/osx/";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					../../../addons/ofxCef/libs/CEF/lib/osx,
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxCef/libs,
+					../../../addons/ofxCef/libs/CEF,
+					../../../addons/ofxCef/libs/CEF/include,
+					../../../addons/ofxCef/libs/CEF/include/base,
+					../../../addons/ofxCef/libs/CEF/include/base/internal,
+					../../../addons/ofxCef/libs/CEF/include/capi,
+					../../../addons/ofxCef/libs/CEF/include/capi/test,
+					../../../addons/ofxCef/libs/CEF/include/capi/views,
+					../../../addons/ofxCef/libs/CEF/include/internal,
+					../../../addons/ofxCef/libs/CEF/include/test,
+					../../../addons/ofxCef/libs/CEF/include/views,
+					../../../addons/ofxCef/libs/CEF/include/wrapper,
+					../../../addons/ofxCef/libs/CEF/lib,
+					../../../addons/ofxCef/libs/CEF/lib/osx,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app/Contents,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app/Contents/MacOS,
+					../../../addons/ofxCef/libs/CEF/win32,
+					../../../addons/ofxCef/libs/CEF/win64,
+					../../../addons/ofxCef/src,
+				);
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "cef_helper_mac-Info.plist";
+				INSTALL_PATH = /Applications;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../../../../";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = ../../../addons/ofxCef/libs/CEF/lib/osx/libcef_dll_wrapper.a;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		412C182D1F95F89200E2B940 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/../libs/cef/lib/osx/";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					../../../addons/ofxCef/libs/CEF/lib/osx,
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxCef/libs,
+					../../../addons/ofxCef/libs/CEF,
+					../../../addons/ofxCef/libs/CEF/include,
+					../../../addons/ofxCef/libs/CEF/include/base,
+					../../../addons/ofxCef/libs/CEF/include/base/internal,
+					../../../addons/ofxCef/libs/CEF/include/capi,
+					../../../addons/ofxCef/libs/CEF/include/capi/test,
+					../../../addons/ofxCef/libs/CEF/include/capi/views,
+					../../../addons/ofxCef/libs/CEF/include/internal,
+					../../../addons/ofxCef/libs/CEF/include/test,
+					../../../addons/ofxCef/libs/CEF/include/views,
+					../../../addons/ofxCef/libs/CEF/include/wrapper,
+					../../../addons/ofxCef/libs/CEF/lib,
+					../../../addons/ofxCef/libs/CEF/lib/osx,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app/Contents,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app/Contents/MacOS,
+					../../../addons/ofxCef/libs/CEF/win32,
+					../../../addons/ofxCef/libs/CEF/win64,
+					../../../addons/ofxCef/src,
+				);
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "cef_helper_mac-Info.plist";
+				INSTALL_PATH = /Applications;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../../../../";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = ../../../addons/ofxCef/libs/CEF/lib/osx/libcef_dll_wrapper.a;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxCef/libs,
+					../../../addons/ofxCef/libs/CEF,
+					../../../addons/ofxCef/libs/CEF/include,
+					../../../addons/ofxCef/libs/CEF/include/base,
+					../../../addons/ofxCef/libs/CEF/include/base/internal,
+					../../../addons/ofxCef/libs/CEF/include/capi,
+					../../../addons/ofxCef/libs/CEF/include/capi/test,
+					../../../addons/ofxCef/libs/CEF/include/capi/views,
+					../../../addons/ofxCef/libs/CEF/include/internal,
+					../../../addons/ofxCef/libs/CEF/include/test,
+					../../../addons/ofxCef/libs/CEF/include/views,
+					../../../addons/ofxCef/libs/CEF/include/wrapper,
+					../../../addons/ofxCef/libs/CEF/lib,
+					../../../addons/ofxCef/libs/CEF/lib/osx,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app/Contents,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app/Contents/MacOS,
+					../../../addons/ofxCef/libs/CEF/osx32_,
+					../../../addons/ofxCef/libs/CEF/osx32_/build,
+					../../../addons/ofxCef/libs/CEF/osx32_/cmake,
+					../../../addons/ofxCef/libs/CEF/osx32_/include,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/base,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/base/internal,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/capi,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/capi/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/capi/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/internal,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/wrapper,
+					../../../addons/ofxCef/libs/CEF/osx32_/lib,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/extensions,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/extensions/api,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/extensions/api/tabs,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/native,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/net,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/osr,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/pepper,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/permissions,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/plugins,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/prefs,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/printing,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common/extensions,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common/extensions/api,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common/net,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/features,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer/extensions,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer/media,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer/pepper,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer/plugins,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/resources,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/utility,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/base,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/cpptoc,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/cpptoc/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/cpptoc/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/ctocpp,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/ctocpp/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/ctocpp/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/sandbox,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/wrapper,
+					../../../addons/ofxCef/libs/CEF/osx32_/patch,
+					../../../addons/ofxCef/libs/CEF/osx32_/patch/patches,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/browser,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/common,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/renderer,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/resources,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/resources/mac,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/resources/mac/English.lproj,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/resources/win,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefsimple,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefsimple/mac,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefsimple/mac/English.lproj,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefsimple/res,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/resources,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/resources/mac,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/resources/mac/English.lproj,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/resources/win,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/gtest,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/gtest/include,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/gtest/include/gtest,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared/browser,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared/common,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared/renderer,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared/resources,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/automate,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/cefbuilds,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/distrib,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/distrib/mac,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/distrib/win,
+					../../../addons/ofxCef/libs/CEF/win32,
+					../../../addons/ofxCef/libs/CEF/win64,
+					../../../addons/ofxCef/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					../../../addons/ofxCef/libs/CEF/lib/osx/libcef_dll_wrapper.a,
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../../addons/ofxCef/libs,
+					../../../addons/ofxCef/libs/CEF,
+					../../../addons/ofxCef/libs/CEF/include,
+					../../../addons/ofxCef/libs/CEF/include/base,
+					../../../addons/ofxCef/libs/CEF/include/base/internal,
+					../../../addons/ofxCef/libs/CEF/include/capi,
+					../../../addons/ofxCef/libs/CEF/include/capi/test,
+					../../../addons/ofxCef/libs/CEF/include/capi/views,
+					../../../addons/ofxCef/libs/CEF/include/internal,
+					../../../addons/ofxCef/libs/CEF/include/test,
+					../../../addons/ofxCef/libs/CEF/include/views,
+					../../../addons/ofxCef/libs/CEF/include/wrapper,
+					../../../addons/ofxCef/libs/CEF/lib,
+					../../../addons/ofxCef/libs/CEF/lib/osx,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app/Contents,
+					../../../addons/ofxCef/libs/CEF/lib/osx/cefclient,
+					Helper.app/Contents/MacOS,
+					../../../addons/ofxCef/libs/CEF/osx32_,
+					../../../addons/ofxCef/libs/CEF/osx32_/build,
+					../../../addons/ofxCef/libs/CEF/osx32_/cmake,
+					../../../addons/ofxCef/libs/CEF/osx32_/include,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/base,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/base/internal,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/capi,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/capi/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/capi/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/internal,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/include/wrapper,
+					../../../addons/ofxCef/libs/CEF/osx32_/lib,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/extensions,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/extensions/api,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/extensions/api/tabs,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/native,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/net,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/osr,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/pepper,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/permissions,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/plugins,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/prefs,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/printing,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/browser/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common/extensions,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common/extensions/api,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common/net,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/common/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/features,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer/extensions,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer/media,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer/pepper,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/renderer/plugins,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/resources,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef/utility,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/base,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/cpptoc,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/cpptoc/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/cpptoc/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/ctocpp,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/ctocpp/test,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/ctocpp/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/sandbox,
+					../../../addons/ofxCef/libs/CEF/osx32_/libcef_dll/wrapper,
+					../../../addons/ofxCef/libs/CEF/osx32_/patch,
+					../../../addons/ofxCef/libs/CEF/osx32_/patch/patches,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/browser,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/common,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/renderer,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/resources,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/resources/mac,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/resources/mac/English.lproj,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefclient/resources/win,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefsimple,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefsimple/mac,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefsimple/mac/English.lproj,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/cefsimple/res,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/resources,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/resources/mac,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/resources/mac/English.lproj,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/resources/win,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/ceftests/views,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/gtest,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/gtest/include,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/gtest/include/gtest,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared/browser,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared/common,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared/renderer,
+					../../../addons/ofxCef/libs/CEF/osx32_/tests/shared/resources,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/automate,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/cefbuilds,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/distrib,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/distrib/mac,
+					../../../addons/ofxCef/libs/CEF/osx32_/tools/distrib/win,
+					../../../addons/ofxCef/libs/CEF/win32,
+					../../../addons/ofxCef/libs/CEF/win64,
+					../../../addons/ofxCef/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					../../../addons/ofxCef/libs/CEF/lib/osx/libcef_dll_wrapper.a,
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		412C182B1F95F89200E2B940 /* Build configuration list for PBXNativeTarget "cef_helper_mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				412C182C1F95F89200E2B940 /* Debug */,
+				412C182D1F95F89200E2B940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "cef_helper_mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
