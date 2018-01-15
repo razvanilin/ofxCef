@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ofxCef</title>
+
+    <script type="text/javascript">
+      function dataFromOF(args) {
+        document.getElementById('inputDataOF').value = args;
+      }
+    </script>
+
+    <style type="text/css">
+      span {
+        display: block;
+        margin: 50px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <span>
+      Data from OF (press any key): <input type="text" id="inputDataOF" value="" placeholder="" readonly="readonly">
+    </span>
+    <span>
+      <button onclick="dataToOF('Button pressed in web');">Send data to OF</button>
+    </span>
+  </body>
+</html>
