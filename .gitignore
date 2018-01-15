@@ -96,3 +96,5 @@ Desktop.ini
 #CEF specific
 *.pak
 *.bin
+
+libs/
