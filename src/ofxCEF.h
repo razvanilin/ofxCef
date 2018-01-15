@@ -1,10 +1,10 @@
+#ifndef CEFGUI_H
+#define CEFGUI_H
+
 #include "cef_app.h"
 
 #include "ofxCEFBrowserClient.h"
 #include "ofxCEFRenderHandler.h"
-
-#ifndef CEFGUI_H
-#define CEFGUI_H
 
 //--------------------------------------------------------------
 class ofxCEFMessageArgs : public ofEventArgs{
@@ -12,6 +12,11 @@ public:
     string name;
     string type;
     string value;
+};
+
+class ofxCEFJSMessageArgs : public ofEventArgs{
+public:
+    CefRefPtr<CefListValue> args;
 };
 
 //--------------------------------------------------------------
@@ -27,7 +32,8 @@ public:
 //--------------------------------------------------------------
 class ofxCEF;
 
-ofxCEF* initofxCEF(int argc, char** argv);
+void initofxCEF(int argc, char** argv);
+void updateCEF();
 
 //--------------------------------------------------------------
 class ofxCEF
@@ -36,52 +42,88 @@ public:
     ofxCEF();
     ~ofxCEF();
     
+    ofxCEF(const ofxCEF& other) = delete;
+    ofxCEF & operator=(const ofxCEF&) = delete;
+    
 	void exit();
 
     void load(const char*);
-    void update();
+    void reload();
     void draw(void);
     void reshape(int, int);
     
-    void setup();
-    
-    void mouseWheel(int, int);
-    
-    void mousePressed(ofMouseEventArgs &e);
-    void mouseReleased(ofMouseEventArgs &e);
-    void mouseMoved(ofMouseEventArgs &e);
-    void mouseDragged(ofMouseEventArgs &e);
-    
-    void keyPressed(ofKeyEventArgs &e);
-    void keyReleased(ofKeyEventArgs &e);
-    
-    void windowResized(ofResizeEventArgs &e);
+    void setup(const string& url = "", int width = 0, int height = 0);
     
     void enableEvents();
     void disableEvents();
     
-    void executeJS(const char*);
+    void enableResize();
+    void disableResize();
+    
+    void executeJS(const string& command);
 
     void notificationHandler();
     
     void onLoadStart();
     void onLoadEnd(int httpStatusCode);
     
-    void gotMessageFromJS(string name, string type, string value);
+    template <typename ArgumentsType, class ListenerClass>
+    void bind(const string& functionName, ListenerClass * listener, void (ListenerClass::*listenerMethod)(ArgumentsType&), int prio = OF_EVENT_ORDER_AFTER_APP);
 
-    ofEvent<ofxCEFMessageArgs> messageFromJS;
+    // Don't call this
+    void bindCallFromJS(CefRefPtr<CefListValue> args);
+    
     ofEvent<ofxCEFEventArgs> eventFromCEF;
-
- // private:
+    
+    bool V8ContextCreated = false; // Don't set this
+    bool isRendererInitialized() { return V8ContextCreated && renderHandler->initialized; }
+ 
+ private:
+    
+    CefRefPtr<CefBrowser> browser;
+    
+    void mousePressed(ofMouseEventArgs &e);
+    void mouseReleased(ofMouseEventArgs &e);
+    void mouseMoved(ofMouseEventArgs &e);
+    void mouseDragged(ofMouseEventArgs &e);
+    void mouseScrolled(ofMouseEventArgs &e);
+    
+    void keyPressed(ofKeyEventArgs &e);
+    void keyReleased(ofKeyEventArgs &e);
+    
+    void windowResized(ofResizeEventArgs &e);
+    
     int mouseX, mouseY;
 
-    CefRefPtr<CefBrowser> browser;
     CefRefPtr<ofxCEFBrowserClient> client;
 
     ofxCEFRenderHandler* renderHandler;
+    
+    bool fixedSize;
+    float width_, height_;
 
+    uint64_t browerCreation;
+    
+    ofEvent<const ofxCEFJSMessageArgs&> messageFromJS;
 };
 
 typedef void (ofxCEF::*notificationHandler)();
+
+template <typename ArgumentsType, class ListenerClass>
+void ofxCEF::bind(const string& functionName, ListenerClass * listener, void (ListenerClass::*listenerMethod)(ArgumentsType&), int prio) {
+    
+    // Tell renderer process that we want
+    CefRefPtr<CefProcessMessage> message = CefProcessMessage::Create("js-make-bind");
+    
+    // Retrieve the argument list object. Set the function name
+    CefRefPtr<CefListValue> args = message->GetArgumentList();
+    args->SetSize(1);
+    args->SetString(0, functionName);
+    
+    // Send the message to the render process
+    browser->SendProcessMessage(PID_RENDERER, message);
+    
+    ofAddListener(messageFromJS, listener, listenerMethod, prio);
+}
 
 #endif

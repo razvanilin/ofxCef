@@ -20,12 +20,16 @@ public:
     void OnContextCreated(CefRefPtr<CefBrowser> browser,
                           CefRefPtr<CefFrame> frame,
                           CefRefPtr<CefV8Context> context) OVERRIDE;
+    
+    void OnContextReleased(CefRefPtr<CefBrowser> browser,
+                          CefRefPtr<CefFrame> frame,
+                          CefRefPtr<CefV8Context> context) OVERRIDE;
 
     bool OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
                                   CefProcessId source_process,
                                   CefRefPtr<CefProcessMessage> message) OVERRIDE;
 
-	virtual void OnBeforeCommandLineProcessing( const CefString& process_type, CefRefPtr<CefCommandLine> command_line) OVERRIDE {
+    virtual void OnBeforeCommandLineProcessing( const CefString& process_type, CefRefPtr<CefCommandLine> command_line) OVERRIDE {
 #if defined(TARGET_OSX)
 
         
@@ -40,6 +44,9 @@ public:
         command_line->AppendSwitch(frameScheduling);
 #endif
 
+        printf("Args (OnBeforeCommandLineProcessing): %s", command_line->GetCommandLineString().ToString().c_str());
+
+        
 		//CefString singleProcess(L"-single-process");
 		//command_line->AppendSwitch(singleProcess);
 
@@ -67,6 +74,7 @@ public:
     CefRefPtr<CefV8Context> v8context;
 
     IMPLEMENT_REFCOUNTING(ofxCEFClientApp);
+
 };
 
 #endif

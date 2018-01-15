@@ -204,9 +204,9 @@ bool ofxCEFRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &re
     if (bIsShuttingDown) return false;
     
     if (bIsRetinaDisplay){
-        rect = CefRect(0,0, ofGetWidth()*0.5, ofGetHeight()*0.5);
+        rect = CefRect(0,0, w*0.5, h*0.5);
     } else {
-        rect = CefRect(0,0, ofGetWidth(), ofGetHeight());
+        rect = CefRect(0,0, w, h);
     }
     
     return true;

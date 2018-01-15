@@ -36,29 +36,22 @@ bool ofxCEFBrowserClient::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser
     CefRefPtr<CefListValue> args = message->GetArgumentList();
 
     // Retrieve the argument values.
-    CefString type = message->GetName();
-    string name = args->GetString(0).ToString();
+    string name = message->GetName().ToString();
+    
+    ofLogVerbose() << "Message: " << name << " ; " << args;
     
     
-    // Forward the message argument value to the parent (instance of ofxCEF).    
-    if (type == "string") {
-        _parent->gotMessageFromJS(name, type, args->GetString(1).ToString());
+    string jsBindPrefix = "js-bind-";
+    if (name.compare(0, jsBindPrefix.size(), jsBindPrefix) == 0) {
+        _parent->bindCallFromJS(args);
+        return true;
     }
-    else if (type == "double") {
-        _parent->gotMessageFromJS(name, type, ofToString(args->GetDouble(1)));
+    else if (name == "OnV8ContextCreated") {
+        _parent->V8ContextCreated = true;
     }
-    else if (type == "int") {
-        _parent->gotMessageFromJS(name, type, ofToString(args->GetInt(1)));
-    }
-    else if (type == "bool") {
-        _parent->gotMessageFromJS(name, type, ofToString(args->GetBool(1)));
-    }
-    else {
-        std::cout << "ofxCEFBrowserClient received a message of unknown type." << std::endl;
-        return false;
+    else if (name == "OnV8ContextReleased") {
+        _parent->V8ContextCreated = false;
     }
 
-
-    
     return true;
 }

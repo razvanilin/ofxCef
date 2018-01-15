@@ -1,9 +1,10 @@
+#ifndef RENDER_HANDLER_H
+#define RENDER_HANDLER_H
+
 #include "ofMain.h"
 
 #include "cef_render_handler.h"
 
-#ifndef RENDER_HANDLER_H
-#define RENDER_HANDLER_H
 
 //--------------------------------------------------------------
 class ofxCEFRenderHandler : public CefRenderHandler
@@ -25,20 +26,21 @@ public:
     void render();
     
 
-    bool GetScreenInfo(CefRefPtr<CefBrowser> browser, CefScreenInfo& screen_info);
-    bool GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect);
+    bool GetScreenInfo(CefRefPtr<CefBrowser> browser, CefScreenInfo& screen_info) OVERRIDE;
+    bool GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect) OVERRIDE;
     void OnPaint(CefRefPtr<CefBrowser> browser,
                  PaintElementType type,
                  const RectList &dirtyRects,
                  const void* buffer,
                  int width,
-                 int height);
+                 int height) OVERRIDE;
     const CefRect& popup_rect() const { return popup_rect_; }
     const CefRect& original_popup_rect() const { return original_popup_rect_; }
     CefRect GetPopupRectInWebView(const CefRect& original_rect);
     void ClearPopupRects();
-    void OnPopupShow(CefRefPtr<CefBrowser> browser, bool show);
-    void OnPopupSize(CefRefPtr<CefBrowser> browser, const CefRect& rect);
+    void OnPopupShow(CefRefPtr<CefBrowser> browser, bool show) OVERRIDE;
+    void OnPopupSize(CefRefPtr<CefBrowser> browser, const CefRect& rect) OVERRIDE;
+    
     
   //private:
     
