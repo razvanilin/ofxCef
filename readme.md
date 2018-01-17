@@ -6,6 +6,10 @@ An attempt to get CEF working in openframeworks as an alternative to awesomium, 
 
 ## Installation
 
+The CEF library is not directly included in the addon. The reason for this is a combination of two factors: The CEF source changes quite often and the build is quite big (min 100 mb). So to stay up-to-date ofxCEF would often need to include a new CEF build, which would make this repository very large.
+
+To avoid this the CEF library has to build manually. Luckily there is a [apothecary](https://github.com/openframeworks/apothecary) (already included in OF) script to automate this process.
+
 ### macOS – Xcode
 
 Tested with Xcode 9.2, macOS High Sierra 10.13.2, of_v0.9.8 – 64 Bit Build
@@ -129,16 +133,16 @@ int main( ){
     int argc = 0;
     char** argv = NULL;
     initofxCEF(argc, argv);
-	
-    
-	ofSetupOpenGL(1024,768,OF_WINDOW);      // <-------- setup the GL context
-		
-	// this kicks off the running of my app
-	// can be OF_WINDOW or OF_FULLSCREEN
-	// pass in width and height too:
-	ofRunApp(new ofApp());
 
-    
+
+    ofSetupOpenGL(1024,768,OF_WINDOW);      // <-------- setup the GL context
+
+    // this kicks off the running of my app
+    // can be OF_WINDOW or OF_FULLSCREEN
+    // pass in width and height too:
+    ofRunApp(new ofApp());
+
+
     CefShutdown();
 }
 ```
