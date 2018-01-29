@@ -277,6 +277,7 @@ void ofxCEF::load(const char* url){
     }
 
     browser->GetMainFrame()->LoadURL(url);
+    V8ContextCreated = false;
 }
 
 void ofxCEF::reload() {
@@ -313,11 +314,14 @@ void ofxCEF::draw(float x, float y, float w, float h) const{
     
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, renderHandler->texture_id_);
+    // Use Texture Filtering GL_LINEAR
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     temp.draw();
-    ofPopMatrix();
     glBindTexture(GL_TEXTURE_2D, 0);
     glDisable(GL_TEXTURE_2D);
-
+    
+    ofPopMatrix();
     
     ofEnableAlphaBlending();
 }
