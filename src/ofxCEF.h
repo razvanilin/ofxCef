@@ -5,6 +5,7 @@
 
 #include "ofxCEFBrowserClient.h"
 #include "ofxCEFRenderHandler.h"
+#include "ofBaseTypes.h"
 
 //--------------------------------------------------------------
 class ofxCEFMessageArgs : public ofEventArgs{
@@ -36,7 +37,7 @@ void initofxCEF(int argc, char** argv);
 void updateCEF();
 
 //--------------------------------------------------------------
-class ofxCEF
+class ofxCEF : public ofBaseDraws
 {
 public:
     ofxCEF();
@@ -49,7 +50,13 @@ public:
 
     void load(const char*);
     void reload();
-    void draw(void);
+    
+    using ofBaseDraws::draw;
+    
+    void draw() const {
+        draw(0,0);
+    }
+    void draw(float x, float y, float w, float h) const;
     void reshape(int, int);
     
     void setup(const string& url = "", int width = 0, int height = 0);
@@ -76,8 +83,16 @@ public:
     ofEvent<ofxCEFEventArgs> eventFromCEF;
     
     bool V8ContextCreated = false; // Don't set this
-    bool isRendererInitialized() { return V8ContextCreated && renderHandler->initialized; }
+    bool isRendererInitialized() const { return V8ContextCreated && renderHandler->initialized; }
  
+    /// \brief Get the height.
+    /// \returns the height.
+    float getHeight() const { return height_; }
+    
+    /// \brief Get the width.
+    /// \returns the width.
+    float getWidth() const { return width_; }
+    
  private:
     
     CefRefPtr<CefBrowser> browser;

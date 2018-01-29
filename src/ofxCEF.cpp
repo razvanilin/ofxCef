@@ -183,17 +183,19 @@ void ofxCEF::setup(const string& url, int width, int height){
 	client = new ofxCEFBrowserClient(this, renderHandler);
     browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), url, settings, NULL);
     
-    int reshapeSizeWidth, reshapeSizeHeight;
+    if(!client) { ofLogError() << "client pointer is NULL"; }
+    if(!browser) { ofLogError() << "browser pointer is NULL"; }
+    
     
     if (width <= 0 && height <= 0) {
         fixedSize = false;
-        reshapeSizeWidth = ofGetWidth();
-        reshapeSizeHeight = ofGetHeight();
+        width_ = ofGetWidth();
+        height_ = ofGetHeight();
         
 #if defined(TARGET_OSX)
         if (renderHandler->bIsRetinaDisplay) {
-            reshapeSizeWidth = ofGetWidth()*2;
-            reshapeSizeHeight = ofGetHeight()*2;
+            width_ = ofGetWidth()*2;
+            height_ = ofGetHeight()*2;
         }
 #endif
         enableResize();
@@ -202,14 +204,12 @@ void ofxCEF::setup(const string& url, int width, int height){
         fixedSize = true;
         width_ = width;
         height_ = height;
-        reshapeSizeWidth = width_;
-        reshapeSizeHeight = height_;
     }
     
     // Is this resposible for eventually calling OnPaint,
     // and because the render handler takes a while this has to stay in some queue
     // and sometimes this doesn't work (and a simple resize fixes it)
-    reshape(reshapeSizeWidth, reshapeSizeHeight);
+    reshape(width_, height_);
     
     browerCreation = ofGetSystemTime();
     
@@ -285,7 +285,7 @@ void ofxCEF::reload() {
 }
 
 //--------------------------------------------------------------
-void ofxCEF::draw(void){
+void ofxCEF::draw(float x, float y, float w, float h) const{
     
     if (!isRendererInitialized()) { return; }
     
@@ -297,22 +297,18 @@ void ofxCEF::draw(void){
     // Enable alpha blending.
     glEnable(GL_BLEND);
     
-    //cout << ofGetWidth() << " - " << ofGetHeight() << endl;
-    if (!fixedSize) {
-        width_ = ofGetWidth();
-        height_ = ofGetHeight();
-    }
 
     ofMesh temp;
     temp.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
-    temp.addVertex( ofPoint(0,0) );
+    temp.addVertex( ofPoint(x,y) );
     temp.addTexCoord( ofVec2f(0,0) );
-    temp.addVertex( ofPoint(width_,0) );
+    temp.addVertex( ofPoint(x+w,y) );
     temp.addTexCoord( ofVec2f(1,0) );
-    temp.addVertex( ofPoint(0,height_) );
+    temp.addVertex( ofPoint(x,y+h) );
     temp.addTexCoord( ofVec2f(0,1) );
-    temp.addVertex( ofPoint(width_,height_) );
+    temp.addVertex( ofPoint(x+w,y+h) );
     temp.addTexCoord( ofVec2f(1,1) );
+    
     ofPushMatrix();
     
     glEnable(GL_TEXTURE_2D);
@@ -528,8 +524,12 @@ void ofxCEF::keyReleased(ofKeyEventArgs &e){
 
 //--------------------------------------------------------------
 void ofxCEF::windowResized(ofResizeEventArgs &e){
-    reshape(e.width, e.height);
-    renderHandler->init();
+    if (!fixedSize) {
+        width_ = e.width;
+        height_ = e.height;
+        reshape(e.width, e.height);
+        renderHandler->init();
+    }
     //cefgui->browser->Reload();
 }
 
