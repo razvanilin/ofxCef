@@ -1,5 +1,6 @@
 #include "ofxCEFBrowserClient.h"
 #include "ofxCEF.h"
+#include "include/wrapper/cef_helpers.h"
 
 //--------------------------------------------------------------
 ofxCEFBrowserClient::ofxCEFBrowserClient(ofxCEF* parent, ofxCEFRenderHandler* renderHandler){
@@ -14,6 +15,10 @@ CefRefPtr<CefRenderHandler> ofxCEFBrowserClient::GetRenderHandler(){
 
 //--------------------------------------------------------------
 CefRefPtr<CefLoadHandler> ofxCEFBrowserClient::GetLoadHandler(){
+    return this;
+}
+
+CefRefPtr<CefLifeSpanHandler> ofxCEFBrowserClient::GetLifeSpanHandler(){
     return this;
 }
 
@@ -54,4 +59,33 @@ bool ofxCEFBrowserClient::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser
     }
 
     return true;
+}
+
+
+void ofxCEFBrowserClient::OnAfterCreated(CefRefPtr<CefBrowser> browser) {
+    // Must be executed on the UI thread.
+    CEF_REQUIRE_UI_THREAD();
+    
+    if (!m_Browser.get())   {
+        // Keep a reference to the main browser.
+        m_Browser = browser;
+        m_BrowserId = browser->GetIdentifier();
+    }
+    
+    // Keep track of how many browsers currently exist.
+    m_BrowserCount++;
+}
+
+void ofxCEFBrowserClient::OnBeforeClose(CefRefPtr<CefBrowser> browser) {
+    // Must be executed on the UI thread.
+    CEF_REQUIRE_UI_THREAD();
+    
+    if (m_BrowserId == browser->GetIdentifier()) {
+        // Free the browser pointer so that the browser can be destroyed.
+        m_Browser = NULL;
+    }
+    
+    if (--m_BrowserCount == 0) {
+
+    }
 }

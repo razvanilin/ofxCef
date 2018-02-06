@@ -220,7 +220,7 @@ void ofxCEF::setup(const string& url, int width, int height){
     // In theory multiple browsers could be created with the same Client.
     // But that would make assigning the browser instances and OnProcessMessageReceived() callbacks to the right ofxCEF instances complicated
 	client = new ofxCEFBrowserClient(this, renderHandler);
-    browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), url, settings, NULL);
+    CefBrowserHost::CreateBrowser(windowInfo, client.get(), url, settings, NULL);
     
     if(!client) { ofLogError() << "client pointer is NULL"; }
     
@@ -240,7 +240,9 @@ void ofxCEF::exit() {
 	//TODO Check if we need to do some calls to OnBeforeClose 
 	disableEvents();
 	renderHandler->bIsShuttingDown = true;
-    browser->GetHost()->CloseBrowser(true);
+    if (browser()) {
+        browser()->GetHost()->CloseBrowser(true);
+    }
     
     // The following call to CefShutdown make the app crash on OS X. Still not working on Windows neither.
 	//CefShutdown();
@@ -286,20 +288,27 @@ void ofxCEF::load(const char* url){
     if (!renderHandler->initialized) {
         renderHandler->init();
     }
-
-    browser->GetMainFrame()->LoadURL(url);
-    V8ContextCreated = false;
+    
+    
+    if (browser()) {
+        // Crashes when url is empty
+        browser()->GetMainFrame()->LoadURL(url);
+        V8ContextCreated = false;
+    }
+    
 }
 
 void ofxCEF::reload() {
     V8ContextCreated = false;
-    browser->Reload();
+    if (browser()) {
+        browser()->Reload();
+    }
 }
 
 //--------------------------------------------------------------
 void ofxCEF::draw(float x, float y, float w, float h) const{
     
-    if (!isRendererInitialized()) { return; }
+    if (!isReady()) { return; }
     
 //    cout << "ofxCEF::draw "<< endl;
 //    CefDoMessageLoopWork();
@@ -402,22 +411,28 @@ void ofxCEF::notificationHandler(){
 
     reshape(ofGetWidth(), ofGetHeight());
     renderHandler->init();
-    browser->Reload();
+    browser()->Reload();
 }
 
 //--------------------------------------------------------------
 void ofxCEF::reshape(int w, int h){
+    
+    if (!isReady()) { return; }
+    
     ofLogVerbose() << "Reshape: " << w << " - " << h;
     renderHandler->reshape(w, h);
-    browser->GetHost()->WasResized();
+    browser()->GetHost()->WasResized();
 }
 
 //--------------------------------------------------------------
 void ofxCEF::mousePressed(ofMouseEventArgs &e){
+    
+    if (!browser()) { return; }
+    
     int x = e.x;
     int y = e.y;
     
-    browser->GetHost()->SendFocusEvent(true);
+    browser()->GetHost()->SendFocusEvent(true);
 
     if (renderHandler->bIsRetinaDisplay){
         x/=2;
@@ -430,11 +445,14 @@ void ofxCEF::mousePressed(ofMouseEventArgs &e){
     event.modifiers = 0;
     event.modifiers |= EVENTFLAG_LEFT_MOUSE_BUTTON;
     CefBrowserHost::MouseButtonType btnType = MBT_LEFT;
-    browser->GetHost()->SendMouseClickEvent(event, btnType, false, 1);
+    browser()->GetHost()->SendMouseClickEvent(event, btnType, false, 1);
 }
 
 //--------------------------------------------------------------
 void ofxCEF::mouseReleased(ofMouseEventArgs &e){
+    
+    if (!browser()) { return; }
+    
     int x = e.x;
     int y = e.y;
     
@@ -449,12 +467,15 @@ void ofxCEF::mouseReleased(ofMouseEventArgs &e){
     event.modifiers = 0;
     event.modifiers |= EVENTFLAG_LEFT_MOUSE_BUTTON;
     CefBrowserHost::MouseButtonType btnType = MBT_LEFT;
-    browser->GetHost()->SendMouseClickEvent(event, btnType, true, 1);
+    browser()->GetHost()->SendMouseClickEvent(event, btnType, true, 1);
 
 }
 
 //--------------------------------------------------------------
 void ofxCEF::mouseMoved(ofMouseEventArgs &e){
+    
+    if (!browser()) { return; }
+    
     int x = e.x;
     int y = e.y;
     
@@ -470,8 +491,8 @@ void ofxCEF::mouseMoved(ofMouseEventArgs &e){
     event.x = x;
     event.y = y;
     
-    browser->GetHost()->SendMouseMoveEvent(event, false);
-    
+    browser()->GetHost()->SendMouseMoveEvent(event, false);
+
 }
 
 //--------------------------------------------------------------
@@ -481,16 +502,22 @@ void ofxCEF::mouseDragged(ofMouseEventArgs &e){
 
 //--------------------------------------------------------------
 void ofxCEF::mouseScrolled(ofMouseEventArgs & mouse) {
+    
+    if (!browser()) { return; }
+    
     CefMouseEvent mouse_event;
     mouse_event.x = mouse.x;
     mouse_event.y = mouse.y;
     mouse_event.modifiers = 0;
     // Scrolling speed is slower than normal, why?
-    browser->GetHost()->SendMouseWheelEvent(mouse_event, mouse.scrollX, mouse.scrollY);
+    browser()->GetHost()->SendMouseWheelEvent(mouse_event, mouse.scrollX, mouse.scrollY);
 }
 
 //--------------------------------------------------------------
 void ofxCEF::keyPressed(ofKeyEventArgs &e){
+    
+    if (!browser()) { return; }
+    
     //cout << "KEY:: " << e.key << " - KEYCODE:: " <<  e.keycode << " - SCANCODE::" << e.scancode << endl;
     
     CefKeyEvent event;
@@ -511,11 +538,14 @@ void ofxCEF::keyPressed(ofKeyEventArgs &e){
         
     }
     
-    browser->GetHost()->SendKeyEvent(event);
+    browser()->GetHost()->SendKeyEvent(event);
 }
 
 //--------------------------------------------------------------
 void ofxCEF::keyReleased(ofKeyEventArgs &e){
+    
+    if (!browser()) { return; }
+    
     CefKeyEvent event;
     
     if (e.key == OF_KEY_LEFT || e.key == OF_KEY_UP
@@ -527,13 +557,13 @@ void ofxCEF::keyReleased(ofKeyEventArgs &e){
         event.native_key_code = e.scancode;
         event.character = (char)e.key;
         event.type = KEYEVENT_CHAR;
-        browser->GetHost()->SendKeyEvent(event);
+        browser()->GetHost()->SendKeyEvent(event);
         
     } else {
 		event.windows_key_code = e.key;
         event.native_key_code = e.scancode;
         event.type = KEYEVENT_KEYUP;
-        browser->GetHost()->SendKeyEvent(event);
+        browser()->GetHost()->SendKeyEvent(event);
     }
 }
 
@@ -551,6 +581,10 @@ void ofxCEF::windowResized(ofResizeEventArgs &e){
 
 //--------------------------------------------------------------
 void ofxCEF::executeJS(const string& command){
-    CefRefPtr<CefFrame> frame = browser->GetMainFrame();
+    
+    if (!browser     ()) { return; }
+
+    CefRefPtr<CefFrame> frame = browser()->GetMainFrame();
     frame->ExecuteJavaScript(command, frame->GetURL(), 0);
+
 }

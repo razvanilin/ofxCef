@@ -26,5 +26,5 @@ private:
     
     ofxCEF cef;
     void gotMessageFromJS(const ofxCEFJSMessageArgs& msg);
-    bool rendererInitialized = false;
+    bool jsFunctionBinded = false;
 };

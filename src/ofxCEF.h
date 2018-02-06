@@ -83,7 +83,7 @@ public:
     ofEvent<ofxCEFEventArgs> eventFromCEF;
     
     bool V8ContextCreated = false; // Don't set this
-    bool isRendererInitialized() const { return V8ContextCreated && renderHandler->initialized; }
+    bool isReady() const { return V8ContextCreated && renderHandler->initialized && browser(); }
  
     /// \brief Get the height.
     /// \returns the height.
@@ -95,7 +95,7 @@ public:
     
  private:
     
-    CefRefPtr<CefBrowser> browser;
+    CefRefPtr<CefBrowser> browser() const { return client->GetBrowser(); }
     
     void mousePressed(ofMouseEventArgs &e);
     void mouseReleased(ofMouseEventArgs &e);
@@ -136,7 +136,9 @@ void ofxCEF::bind(const string& functionName, ListenerClass * listener, void (Li
     args->SetString(0, functionName);
     
     // Send the message to the render process
-    browser->SendProcessMessage(PID_RENDERER, message);
+    if (browser()) {
+        browser()->SendProcessMessage(PID_RENDERER, message);
+    }
     
     ofAddListener(messageFromJS, listener, listenerMethod, prio);
 }

@@ -9,13 +9,13 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
-    // Don't call the bind method before the render process is initialized
-    // and V8 context is created – Should be an event
-    if (!rendererInitialized && cef.isRendererInitialized()) {
+    // Don't call the bind method before cef is ready
+    // – Should be an event
+    if (!jsFunctionBinded && cef.isReady()) {
         
         // Bind js function 'dataToOf' to C++ method 'ofApp::gotMessageFromJS'
         cef.bind("dataToOF", this, &ofApp::gotMessageFromJS);
-        rendererInitialized = true;
+        jsFunctionBinded = true;
     }
     
     // Globally update CEF
@@ -66,7 +66,7 @@ void ofApp::keyPressed(int key){
 void ofApp::keyReleased(int key){
     if (key == 'r') {
         cef.reload();
-        rendererInitialized = false;
+        jsFunctionBinded = false;
     }
     else if (key == 'b') {
         cef.bind("dataToOF", this, &ofApp::gotMessageFromJS);
