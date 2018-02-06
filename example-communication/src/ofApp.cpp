@@ -2,16 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
-#if defined(TARGET_WIN32)
     string url = "file://" + ofToDataPath("index.html", true);
-#elif defined(TARGET_OSX)
-    // Using 'ofToDataPath' triggers the macOS page not loading bug
-    // Use a webserver to host `bin/index.html`
-    // For example with `python -m SimpleHTTPServer`
-    string url = "http://127.0.0.1:8000";
-#endif
-    
     cef.setup(url);
 }
 

@@ -54,7 +54,9 @@ ofxCEFRenderHandler::ofxCEFRenderHandler(){
     transparent_ = true;
     initialized = false;
     bIsShuttingDown = false;
-	bIsRetinaDisplay = false;
+    bIsRetinaDisplay = false;
+    w = 0;
+    h = 0;
     /*
      //http://stackoverflow.com/questions/11067066/mac-os-x-best-way-to-do-runtime-check-for-retina-display
      float displayScale = 1;

@@ -219,11 +219,5 @@ cef.bind("dataToOF", this, &ofApp::gotMessageFromJS);
 <br />
 
 ## Known Issues
-
-- Sometimes the page doesn't load and the render process uses 1 GB of memory (macOS only).
-	
-	This can be observed in the `communication` and `multi` example. This is discussed in [this issue](https://github.com/ofZach/ofxCef/issues/36) and the [CEF forum](http://magpcss.org/ceforum/viewtopic.php?f=6&t=15251).
 	
 - CEF hijacks the menu bar and makes it unusable, among other things cmd+q isn't working anymore (macOS only).
-
-- In the windows Release build, the page sometimes doesn't show.

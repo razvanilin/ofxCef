@@ -2,12 +2,6 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    
-    // *** macOS page not loading bug ***
-    // In Debug – of_v0.9.8 - Commenting the following line makes the first instance not load
-    // OF master branch behaves differently
-    ofToDataPath("someString", true);
-    
     width = 100;
     height = 100;
 }

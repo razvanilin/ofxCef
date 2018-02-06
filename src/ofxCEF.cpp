@@ -186,19 +186,6 @@ void ofxCEF::setup(const string& url, int width, int height){
 	windowInfo.SetAsWindowless(hWnd);
 #endif
 
-
-    CefBrowserSettings settings;
-    settings.webgl = STATE_ENABLED;
-    settings.windowless_frame_rate = 60;
-    settings.background_color = 0x00FFFFFF;
-    settings.web_security = STATE_DISABLED;
-
-    client = new ofxCEFBrowserClient(this, renderHandler);
-    browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), url, settings, NULL);
-    
-    if(!client) { ofLogError() << "client pointer is NULL"; }
-    if(!browser) { ofLogError() << "browser pointer is NULL"; }
-    
     
     if (width <= 0 && height <= 0) {
         fixedSize = false;
@@ -219,12 +206,23 @@ void ofxCEF::setup(const string& url, int width, int height){
         height_ = height;
     }
     
-    // Is this resposible for eventually calling OnPaint,
-    // and because the render handler takes a while this has to stay in some queue
-    // and sometimes this doesn't work (and a simple resize fixes it)
-    reshape(width_, height_);
+    // Tell the renderHandler about the size
+    // Do it before the using it in the browser client
+    renderHandler->reshape(width_, height_);
     
-    browerCreation = ofGetSystemTime();
+    
+	CefBrowserSettings settings;
+	settings.webgl = STATE_ENABLED;
+	settings.windowless_frame_rate = 60;
+    settings.background_color = 0x00FFFFFF;
+    settings.web_security = STATE_DISABLED;
+    
+    // In theory multiple browsers could be created with the same Client.
+    // But that would make assigning the browser instances and OnProcessMessageReceived() callbacks to the right ofxCEF instances complicated
+	client = new ofxCEFBrowserClient(this, renderHandler);
+    browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), url, settings, NULL);
+    
+    if(!client) { ofLogError() << "client pointer is NULL"; }
     
     enableEvents();
 }
