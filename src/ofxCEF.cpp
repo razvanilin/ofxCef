@@ -116,9 +116,22 @@ void initofxCEF(int argc, char** argv){
     // On Windows this leads to:
     // tcp_socket_win.cc bind() retunred an error: an attempt was made to access a socket in a way forbidden by its access permissions
 #endif
+    
+    // This could be used on windows, could improve performance
+    // If you enable this, 'CefDoMessageLoopWork()' should not be called
 	//settings.multi_threaded_message_loop = true;
-
-	CefInitialize(main_args, settings, NULL, NULL);
+    
+    // Implement external message pump?! see 'main_message_loop_external_pump' in 'ceftest/shared/browser'
+    //settings.external_message_pump = true;
+    
+    // Default is LOGSEVERITY_INFO
+    //settings.log_severity = LOGSEVERITY_VERBOSE;
+    
+    
+    // Initialize CEF
+    if (!CefInitialize(main_args, settings, NULL, NULL)) {
+        ofLogError() << "CefInitialize failed";
+    }
     
 }
 
@@ -153,8 +166,8 @@ void updateCEF(){
 //--------------------------------------------------------------
 void ofxCEF::setup(const string& url, int width, int height){
     
-	CefWindowInfo windowInfo;
-	renderHandler = new ofxCEFRenderHandler();
+    CefWindowInfo windowInfo;
+    renderHandler = new ofxCEFRenderHandler();
 
 #if defined(TARGET_OSX) 
 	NSWindow * cocoaWindow =  (NSWindow *) ((ofAppGLFWWindow *) ofGetWindowPtr())->getCocoaWindow();
@@ -174,13 +187,13 @@ void ofxCEF::setup(const string& url, int width, int height){
 #endif
 
 
-	CefBrowserSettings settings;
-	settings.webgl = STATE_ENABLED;
-	settings.windowless_frame_rate = 60;
+    CefBrowserSettings settings;
+    settings.webgl = STATE_ENABLED;
+    settings.windowless_frame_rate = 60;
     settings.background_color = 0x00FFFFFF;
     settings.web_security = STATE_DISABLED;
 
-	client = new ofxCEFBrowserClient(this, renderHandler);
+    client = new ofxCEFBrowserClient(this, renderHandler);
     browser = CefBrowserHost::CreateBrowserSync(windowInfo, client.get(), url, settings, NULL);
     
     if(!client) { ofLogError() << "client pointer is NULL"; }
