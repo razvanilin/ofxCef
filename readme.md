@@ -114,6 +114,22 @@ The apothecary build directory still contains the CEF sources from which the CEF
 ./apothecary remove ofxCef
 ```
 
+<br />
+
+### Updating CEF library
+
+If you want to update to the latest CEF library you first also need to delete the old CEF sources (so apothecary won't skip the download of the new version):
+
+```bash
+./apothecary remove ofxCef
+```
+
+Then you need to set the `VER` variable in `scripts/formulas/cef.sh` to the version you want to use from [Automated Builds from Spotify](http://opensource.spotify.com/cefbuilds/index.html). After that you need to rerun:
+
+```bash
+./apothecary update ofxCef
+```
+
 
 <br />
 <br />
