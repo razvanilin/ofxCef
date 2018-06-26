@@ -3,17 +3,17 @@
 
 An attempt to get CEF working in openframeworks as an alternative to awesomium, berkelium, etc. [More info on CEF](https://bitbucket.org/chromiumembedded/cef) [wiki](https://bitbucket.org/chromiumembedded/cef/wiki/Home)
 
-**Note**: If you are using openFrameworks version `0.10.0` or higher switch to `make_it_work_0.10.0` branch.
+**Note**: If you are using openFrameworks version `0.9.8` switch to `make_it_work` branch.
 
 ## Installation
 
 The CEF library is not directly included in the addon. The reason for this is a combination of two factors: The CEF source changes quite often and the build is quite big (min 100 mb). So to stay up-to-date ofxCEF would often need to include a new CEF build, which would make this repository very large.
 
-To avoid this the CEF library has to build manually. Luckily there is a [apothecary](https://github.com/openframeworks/apothecary) (already included in OF) script to automate this process.
+To avoid this the CEF library has to build manually. Luckily there is a [apothecary](https://github.com/openframeworks/apothecary) script to automate this process.
 
 ### macOS – Xcode
 
-Tested with Xcode 9.2, macOS High Sierra 10.13.2, of_v0.9.8 – 64 Bit Build
+Tested with Xcode 9.4, macOS High Sierra 10.13.5, of_v0.10.0 – 64 Bit Build
 
 **Requirements**
 
@@ -26,9 +26,13 @@ brew install cmake
 **Setup**
 
 ```bash
-cd of_v0.9.8_osx_release/scripts/apothecary/
+cd of_v0.10.0_osx_release/scripts/
+git clone https://github.com/openframeworks/apothecary
+cd apothecary/apothecary
 ./apothecary update ofxCef
 ```
+
+`apothecary` has a bug where the path for [copying addon libraries is wrong](https://github.com/openframeworks/apothecary/issues/116). Until this is fixed you can comment line 1222: `IS_CUSTOM_LIBS_DIR=1` and it should work.
 
 This will download, build and setup the directory structure for the CEF library.
 The script will download the builds from [Automated Builds from Spotify](http://opensource.spotify.com/cefbuilds/index.html). You can set the version `VER` in `scripts/formulas/cef.sh`.
