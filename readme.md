@@ -3,6 +3,7 @@
 
 An attempt to get CEF working in openframeworks as an alternative to awesomium, berkelium, etc. [More info on CEF](https://bitbucket.org/chromiumembedded/cef) [wiki](https://bitbucket.org/chromiumembedded/cef/wiki/Home)
 
+**Note**: If you are using openFrameworks version `0.10.0` or higher switch to `make_it_work_0.10.0` branch.
 
 ## Installation
 
