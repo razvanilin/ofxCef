@@ -3,7 +3,7 @@
 
 An attempt to get CEF working in openframeworks as an alternative to awesomium, berkelium, etc. [More info on CEF](https://bitbucket.org/chromiumembedded/cef) [wiki](https://bitbucket.org/chromiumembedded/cef/wiki/Home)
 
-**Note**: If you are using openFrameworks version `0.9.8` switch to `make_it_work` branch.
+**Note**: If you are using openFrameworks version `0.9.8` switch to `make_it_work_0.9.8` branch.
 
 ## Installation
 
@@ -74,7 +74,7 @@ If you change any of the following sources you have to rebuild the `cef_helper_m
 
 ### Windows – Visual Studio
 
-Tested with VS 2015, Windows 8.1 Pro, of_v0.9.8 – 64 Bit Build
+Tested with VS 2017, Windows 10 Pro, of_v0.10.0 – 64 Bit Build
 
 **Requirements**
 
@@ -84,11 +84,15 @@ Tested with VS 2015, Windows 8.1 Pro, of_v0.9.8 – 64 Bit Build
 
 **Setup**
 
-Navigate to `of_v0.9.8_osx_release/scripts/apothecary/` then right click in the Explorer and select `Git Bash Here`. Then use this command:
+Navigate to `of_v0.10.0_vs2017_release/scripts/` then right click in the Explorer and select `Git Bash Here`. Then use this command:
 
 ```bash
+git clone https://github.com/openframeworks/apothecary
+cd apothecary/apothecary
 ./apothecary update ofxCef
 ```
+
+`apothecary` has a bug where the path for [copying addon libraries is wrong](https://github.com/openframeworks/apothecary/issues/116). Until this is fixed you can comment line 1222: `IS_CUSTOM_LIBS_DIR=1` and it should work.
 
 This will download, build and setup the directory structure for the CEF library.
 The script will download the builds from [Automated Builds from Spotify](http://opensource.spotify.com/cefbuilds/index.html). You can set the version `VER` in `scripts/formulas/cef.sh`.
@@ -102,7 +106,7 @@ After creating a new project with the ProjectGenerator you have to do one simple
 Open the project properties, change `Configuration` to `All Configurations` and `Platforms` to `All Platforms`. In `Build Events` > `Post-Build Event` set `Command Line` with <Edit…> to:
     
 ```
-robocopy "$(OF_ROOT)/export/vs/$(Platform_Actual)/" "$(ProjectDir)bin/" "*.dll" /njs /njh /np /fp /bytes
+for /d %%f in ("$(OF_ROOT)\libs\*") do (if exist "%%f\lib\vs\$(Platform_Actual)\*.dll" (robocopy "%%f\lib\vs\$(Platform_Actual)" "$(ProjectDir)bin" "*.dll" /njs /njh /np /fp /bytes ))
 robocopy "$(OF_ROOT)/addons/ofxCef/libs/cef/export/vs/$(Platform_Actual)/" "$(ProjectDir)bin/" "*" /E /njs /njh /np /fp /bytes
 if errorlevel 1 exit 0 else exit %errorlevel%
 ```
