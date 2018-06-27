@@ -61,7 +61,8 @@ function prepare() {
     sed -i -e 's/\/MT           # Multithreaded release/\/MD           # Multithreaded release DLL/g' cmake/cef_variables.cmake
 
     # Disable Sandbox because cef_sandbox.lib is already compiled with /MT
-    cmake -G "Visual Studio 14 2015 Win64" -DUSE_SANDBOX=Off # VS 2015
+    #cmake -G "Visual Studio 14 2015 Win64" -DUSE_SANDBOX=Off # VS 2015
+    cmake -G "Visual Studio 15 2017 Win64" -DUSE_SANDBOX=Off
 
   fi
 
@@ -77,8 +78,10 @@ function build() {
     xcodebuild -target libcef_dll_wrapper -configuration Release -project cef.xcodeproj/
 
   elif [ "$TYPE" == "vs" ] || [ "$TYPE" == "msys2" ] ; then
-     "/c/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe" -target:libcef_dll_wrapper -p:"Configuration=Release;Platform=x64" cef.sln
-     "/c/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe" -target:libcef_dll_wrapper -p:"Configuration=Debug;Platform=x64" cef.sln
+     #"/c/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe" -target:libcef_dll_wrapper -p:"Configuration=Release;Platform=x64" cef.sln  # VS2015
+     #"/c/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe" -target:libcef_dll_wrapper -p:"Configuration=Debug;Platform=x64" cef.sln  # VS2015
+     "/c/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" -target:libcef_dll_wrapper -p:"Configuration=Release;Platform=x64" cef.sln
+     "/c/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" -target:libcef_dll_wrapper -p:"Configuration=Debug;Platform=x64" cef.sln
   fi
 }
 
@@ -130,7 +133,8 @@ function clean() {
   if [ "$TYPE" == "osx" ] ; then
     xcodebuild clean -project cef.xcodeproj/
   elif [ "$TYPE" == "vs" ] || [ "$TYPE" == "msys2" ] ; then
-    "/c/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe" cef.sln -t:"Clean" 
+    #"/c/Program Files (x86)/MSBuild/14.0/Bin/MSBuild.exe" cef.sln -t:"Clean" # VS2015
+    "/c/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" cef.sln -t:"Clean"
   fi
 
   rm -f CMakeCache.txt
