@@ -57,8 +57,8 @@ function prepare() {
   elif [ "$TYPE" == "vs" ] || [ "$TYPE" == "msys2" ] ; then
 
     # Set Runtime Library from /MT to /MD
-    sed -i -e 's/\/MTd          # Multithreaded debug/\/MDd          # Multithreaded debug DLL/g' cmake/cef_variables.cmake
-    sed -i -e 's/\/MT           # Multithreaded release/\/MD           # Multithreaded release DLL/g' cmake/cef_variables.cmake
+    # Setting `-DCEF_RUNTIME_LIBRARY_FLAG=/MD` doesn't seem to work?
+    sed -i -e 's/CEF_RUNTIME_LIBRARY_FLAG \"\/MT\"/CEF_RUNTIME_LIBRARY_FLAG \"\/MD\"/g' cmake/cef_variables.cmake
 
     # Disable Sandbox because cef_sandbox.lib is already compiled with /MT
     #cmake -G "Visual Studio 14 2015 Win64" -DUSE_SANDBOX=Off # VS 2015
