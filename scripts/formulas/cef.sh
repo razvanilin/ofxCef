@@ -120,9 +120,7 @@ function copy() {
     mkdir -pv $1/export/vs/x64
     cp -RHv "Release/."  $1/export/vs/x64/
     cp -RHv "Resources/."  $1/export/vs/x64/
-    rm $1/export/vs/x64/libcef.lib
-    rm $1/export/vs/x64/cef_sandbox.lib
-    rm $1/export/vs/x64/widevinecdmadapter.dll
+    rm $1/export/vs/x64/*.lib
   fi
 }
 
