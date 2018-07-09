@@ -51,7 +51,7 @@
 HINSTANCE hInst;   // current instance
 #endif
 
-void initofxCEF(int argc, char** argv){
+int initofxCEF(int argc, char** argv){
 
 #if defined(TARGET_OSX)
     CefMainArgs main_args(argc, argv);
@@ -99,8 +99,9 @@ void initofxCEF(int argc, char** argv){
     
     // Execute the secondary process, if any.
     int exit_code = CefExecuteProcess(main_args, app, NULL);
-    if (exit_code >= 0)
-        return;
+    if (exit_code >= 0) {
+        return exit_code;
+    }
     
 #endif
     
@@ -133,6 +134,7 @@ void initofxCEF(int argc, char** argv){
         ofLogError() << "CefInitialize failed";
     }
     
+    return -1;
 }
 
 

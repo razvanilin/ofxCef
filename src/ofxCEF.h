@@ -33,7 +33,7 @@ public:
 //--------------------------------------------------------------
 class ofxCEF;
 
-void initofxCEF(int argc, char** argv);
+int initofxCEF(int argc, char** argv);
 void updateCEF();
 
 //--------------------------------------------------------------

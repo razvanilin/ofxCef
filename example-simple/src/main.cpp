@@ -6,7 +6,10 @@ int main( ){
     
     int argc = 0;
     char** argv = NULL;
-    initofxCEF(argc, argv);
+    int exit_code = initofxCEF(argc, argv);
+    if (exit_code >= 0) {
+        return exit_code;
+    }
     
 	ofSetupOpenGL(1024,768,OF_WINDOW);			// <-------- setup the GL context
 
