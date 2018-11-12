@@ -6,7 +6,7 @@ FORMULA_TYPES=( "osx" "vs" "msys2" )
 
 # Define the version and distribution (Standard | Minimal)
 # Is there permanent link to the latest version?
-VER=3.3396.1782.gc368dbf
+VER=3.3538.1849.g458cc98
 DISTRIBUTION="Minimal"
 
 # download the source code and unpack it into LIB_NAME
