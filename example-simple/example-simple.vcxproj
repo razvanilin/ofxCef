@@ -200,21 +200,23 @@ if errorlevel 1 exit 0 else exit %errorlevel%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\ofxCEFClientAppBrowser.cpp" />
+    <ClCompile Include="..\src\ofxCEFClientAppRenderer.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxCef\src\cefListV8Converter.cpp" />
     <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEF.cpp" />
     <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFBrowserClient.cpp" />
-    <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFClientApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFRenderHandler.cpp" />
     <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFV8ExtensionHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\ofxCEFClientAppBrowser.h" />
+    <ClInclude Include="..\src\ofxCEFClientAppRenderer.h" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="..\..\..\addons\ofxCef\src\cefListV8Converter.hpp" />
     <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEF.h" />
     <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFBrowserClient.h" />
-    <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFClientApp.h" />
     <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFRenderHandler.h" />
     <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFV8ExtensionHandler.h" />
     <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_atomicops.h" />

@@ -1,849 +1,855 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<ClCompile Include="src\ofApp.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\main.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\main.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="src\ofApp.cpp">
-			<Filter>src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxCef\src\cefListV8Converter.cpp">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEF.cpp">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFBrowserClient.cpp">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFClientApp.cpp">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFRenderHandler.cpp">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClCompile>
-		<ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFV8ExtensionHandler.cpp">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClCompile>
-	</ItemGroup>
-	<ItemGroup>
-		<Filter Include="src">
-			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons">
-			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef">
-			<UniqueIdentifier>{242B8897-478F-B7EC-238A-8F4F}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\src">
-			<UniqueIdentifier>{D4B7FEB8-FF20-0484-59B5-9E53}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs">
-			<UniqueIdentifier>{259D652A-1060-DF9D-A02E-AE2E}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef">
-			<UniqueIdentifier>{885A750D-613C-CE7B-B45B-3852}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include">
-			<UniqueIdentifier>{1AEE5775-012F-7E1B-CF5C-1156}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\base">
-			<UniqueIdentifier>{9689C101-792D-AB1A-C7DF-069E}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\base\internal">
-			<UniqueIdentifier>{319BDE76-5E11-315A-9A13-F164}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\capi">
-			<UniqueIdentifier>{F0F26143-6024-7965-2498-019F}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\capi\test">
-			<UniqueIdentifier>{CA9CD6BF-7FE6-E07C-D767-C9C1}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\capi\views">
-			<UniqueIdentifier>{358DECDF-A899-5772-B5A5-C927}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\internal">
-			<UniqueIdentifier>{2D10CE5C-3A9F-01C7-FE29-6391}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\test">
-			<UniqueIdentifier>{9DCBCE3D-679F-0807-A4BB-461F}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\views">
-			<UniqueIdentifier>{2D4D42E9-458A-46AB-E2C1-673B}</UniqueIdentifier>
-		</Filter>
-		<Filter Include="addons\ofxCef\libs\cef\include\wrapper">
-			<UniqueIdentifier>{843DA5E7-87E5-A046-2932-AD8D}</UniqueIdentifier>
-		</Filter>
-	</ItemGroup>
-	<ItemGroup>
-		<ClInclude Include="src\ofApp.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="src\ofApp.h">
-			<Filter>src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\src\cefListV8Converter.hpp">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEF.h">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFBrowserClient.h">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFClientApp.h">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFRenderHandler.h">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFV8ExtensionHandler.h">
-			<Filter>addons\ofxCef\src</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_atomicops.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_atomic_ref_count.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_basictypes.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_bind.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_bind_helpers.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_build.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_callback.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_callback_forward.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_callback_helpers.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_callback_list.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_cancelable_callback.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_lock.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_logging.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_macros.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_move.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_platform_thread.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_ref_counted.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_scoped_ptr.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_string16.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_template_util.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_thread_checker.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_thread_collision_warner.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_trace_event.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_tuple.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_weak_ptr.h">
-			<Filter>addons\ofxCef\libs\cef\include\base</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_atomicops_x86_msvc.h">
-			<Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_bind_internal.h">
-			<Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_bind_internal_win.h">
-			<Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_callback_internal.h">
-			<Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_lock_impl.h">
-			<Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_raw_scoped_refptr_mismatch_checker.h">
-			<Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_thread_checker_impl.h">
-			<Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_accessibility_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_app_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_auth_callback_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_base_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_browser_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_browser_process_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_callback_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_client_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_command_line_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_context_menu_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_cookie_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_crash_util_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_dialog_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_display_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_dom_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_download_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_download_item_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_drag_data_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_drag_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_extension_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_extension_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_file_util_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_find_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_focus_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_frame_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_geolocation_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_geolocation_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_image_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_jsdialog_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_keyboard_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_life_span_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_load_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_menu_model_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_menu_model_delegate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_navigation_entry_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_origin_whitelist_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_parser_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_path_util_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_print_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_print_settings_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_process_message_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_process_util_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_render_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_render_process_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_request_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_request_context_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_request_context_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_request_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_resource_bundle_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_resource_bundle_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_resource_handler_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_response_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_response_filter_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_scheme_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_server_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_ssl_info_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_ssl_status_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_stream_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_string_visitor_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_task_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_thread_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_trace_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_urlrequest_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_v8_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_values_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_waitable_event_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_web_plugin_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_x509_certificate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_xml_reader_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_zip_reader_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\test\cef_test_helpers_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\test</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\test\cef_translator_test_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\test</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_box_layout_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_browser_view_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_browser_view_delegate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_button_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_button_delegate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_display_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_fill_layout_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_label_button_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_layout_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_menu_button_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_menu_button_delegate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_panel_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_panel_delegate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_scroll_view_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_textfield_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_textfield_delegate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_view_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_view_delegate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_window_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_window_delegate_capi.h">
-			<Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_accessibility_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_app.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_auth_callback.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_base.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_browser.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_browser_process_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_callback.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_client.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_command_line.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_context_menu_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_cookie.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_crash_util.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_dialog_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_display_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_dom.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_download_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_download_item.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_drag_data.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_drag_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_extension.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_extension_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_file_util.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_find_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_focus_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_frame.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_geolocation.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_geolocation_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_image.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_jsdialog_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_keyboard_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_life_span_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_load_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_menu_model.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_menu_model_delegate.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_navigation_entry.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_origin_whitelist.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_pack_resources.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_pack_strings.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_parser.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_path_util.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_print_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_print_settings.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_process_message.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_process_util.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_render_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_render_process_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_request.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_request_context.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_request_context_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_request_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_resource_bundle.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_resource_bundle_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_resource_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_response.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_response_filter.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_sandbox_win.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_scheme.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_server.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_ssl_info.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_ssl_status.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_stream.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_string_visitor.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_task.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_thread.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_trace.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_urlrequest.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_v8.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_values.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_version.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_waitable_event.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_web_plugin.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_x509_certificate.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_xml_reader.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_zip_reader.h">
-			<Filter>addons\ofxCef\libs\cef\include</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_export.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_logging_internal.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_ptr.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_list.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_map.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_multimap.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_types.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_wrappers.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_thread_internal.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_time.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_trace_event_internal.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_types.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_types_win.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_types_wrappers.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_win.h">
-			<Filter>addons\ofxCef\libs\cef\include\internal</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\test\cef_test_helpers.h">
-			<Filter>addons\ofxCef\libs\cef\include\test</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\test\cef_translator_test.h">
-			<Filter>addons\ofxCef\libs\cef\include\test</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_box_layout.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_browser_view.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_browser_view_delegate.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_button.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_button_delegate.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_display.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_fill_layout.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_label_button.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_layout.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_menu_button.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_menu_button_delegate.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_panel.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_panel_delegate.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_scroll_view.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_textfield.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_textfield_delegate.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_view.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_view_delegate.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_window.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_window_delegate.h">
-			<Filter>addons\ofxCef\libs\cef\include\views</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_byte_read_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_closure_task.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_helpers.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_message_router.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_resource_manager.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_scoped_temp_dir.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_stream_resource_handler.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_xml_object.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-		<ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_zip_archive.h">
-			<Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
-		</ClInclude>
-	</ItemGroup>
-	<ItemGroup>
-		<ResourceCompile Include="icon.rc" />
-	</ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxCef\src\cefListV8Converter.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEF.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFBrowserClient.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFRenderHandler.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxCef\src\ofxCEFV8ExtensionHandler.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxCEFClientAppRenderer.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxCEFClientAppBrowser.cpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef">
+      <UniqueIdentifier>{242B8897-478F-B7EC-238A-8F4F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\src">
+      <UniqueIdentifier>{D4B7FEB8-FF20-0484-59B5-9E53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs">
+      <UniqueIdentifier>{259D652A-1060-DF9D-A02E-AE2E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef">
+      <UniqueIdentifier>{885A750D-613C-CE7B-B45B-3852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include">
+      <UniqueIdentifier>{1AEE5775-012F-7E1B-CF5C-1156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\base">
+      <UniqueIdentifier>{9689C101-792D-AB1A-C7DF-069E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\base\internal">
+      <UniqueIdentifier>{319BDE76-5E11-315A-9A13-F164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\capi">
+      <UniqueIdentifier>{F0F26143-6024-7965-2498-019F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\capi\test">
+      <UniqueIdentifier>{CA9CD6BF-7FE6-E07C-D767-C9C1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\capi\views">
+      <UniqueIdentifier>{358DECDF-A899-5772-B5A5-C927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\internal">
+      <UniqueIdentifier>{2D10CE5C-3A9F-01C7-FE29-6391}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\test">
+      <UniqueIdentifier>{9DCBCE3D-679F-0807-A4BB-461F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\views">
+      <UniqueIdentifier>{2D4D42E9-458A-46AB-E2C1-673B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxCef\libs\cef\include\wrapper">
+      <UniqueIdentifier>{843DA5E7-87E5-A046-2932-AD8D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\src\cefListV8Converter.hpp">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEF.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFBrowserClient.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFRenderHandler.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\src\ofxCEFV8ExtensionHandler.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_atomicops.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_atomic_ref_count.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_basictypes.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_bind.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_bind_helpers.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_build.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_callback.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_callback_forward.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_callback_helpers.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_callback_list.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_cancelable_callback.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_lock.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_logging.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_macros.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_move.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_platform_thread.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_ref_counted.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_scoped_ptr.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_string16.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_template_util.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_thread_checker.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_thread_collision_warner.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_trace_event.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_tuple.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\cef_weak_ptr.h">
+      <Filter>addons\ofxCef\libs\cef\include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_atomicops_x86_msvc.h">
+      <Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_bind_internal.h">
+      <Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_bind_internal_win.h">
+      <Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_callback_internal.h">
+      <Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_lock_impl.h">
+      <Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_raw_scoped_refptr_mismatch_checker.h">
+      <Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\base\internal\cef_thread_checker_impl.h">
+      <Filter>addons\ofxCef\libs\cef\include\base\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_accessibility_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_app_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_auth_callback_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_base_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_browser_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_browser_process_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_callback_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_client_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_command_line_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_context_menu_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_cookie_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_crash_util_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_dialog_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_display_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_dom_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_download_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_download_item_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_drag_data_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_drag_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_extension_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_extension_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_file_util_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_find_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_focus_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_frame_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_geolocation_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_geolocation_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_image_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_jsdialog_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_keyboard_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_life_span_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_load_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_menu_model_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_menu_model_delegate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_navigation_entry_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_origin_whitelist_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_parser_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_path_util_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_print_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_print_settings_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_process_message_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_process_util_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_render_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_render_process_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_request_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_request_context_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_request_context_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_request_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_resource_bundle_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_resource_bundle_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_resource_handler_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_response_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_response_filter_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_scheme_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_server_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_ssl_info_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_ssl_status_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_stream_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_string_visitor_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_task_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_thread_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_trace_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_urlrequest_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_v8_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_values_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_waitable_event_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_web_plugin_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_x509_certificate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_xml_reader_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\cef_zip_reader_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\test\cef_test_helpers_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\test\cef_translator_test_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_box_layout_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_browser_view_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_browser_view_delegate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_button_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_button_delegate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_display_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_fill_layout_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_label_button_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_layout_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_menu_button_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_menu_button_delegate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_panel_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_panel_delegate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_scroll_view_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_textfield_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_textfield_delegate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_view_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_view_delegate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_window_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\capi\views\cef_window_delegate_capi.h">
+      <Filter>addons\ofxCef\libs\cef\include\capi\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_accessibility_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_app.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_auth_callback.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_base.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_browser.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_browser_process_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_callback.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_client.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_command_line.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_context_menu_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_cookie.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_crash_util.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_dialog_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_display_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_dom.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_download_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_download_item.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_drag_data.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_drag_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_extension.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_extension_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_file_util.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_find_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_focus_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_frame.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_geolocation.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_geolocation_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_image.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_jsdialog_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_keyboard_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_life_span_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_load_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_menu_model.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_menu_model_delegate.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_navigation_entry.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_origin_whitelist.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_pack_resources.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_pack_strings.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_parser.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_path_util.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_print_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_print_settings.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_process_message.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_process_util.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_render_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_render_process_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_request.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_request_context.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_request_context_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_request_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_resource_bundle.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_resource_bundle_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_resource_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_response.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_response_filter.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_sandbox_win.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_scheme.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_server.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_ssl_info.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_ssl_status.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_stream.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_string_visitor.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_task.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_thread.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_trace.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_urlrequest.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_v8.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_values.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_version.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_waitable_event.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_web_plugin.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_x509_certificate.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_xml_reader.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\cef_zip_reader.h">
+      <Filter>addons\ofxCef\libs\cef\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_export.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_logging_internal.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_ptr.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_list.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_map.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_multimap.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_types.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_string_wrappers.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_thread_internal.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_time.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_trace_event_internal.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_types.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_types_win.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_types_wrappers.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\internal\cef_win.h">
+      <Filter>addons\ofxCef\libs\cef\include\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\test\cef_test_helpers.h">
+      <Filter>addons\ofxCef\libs\cef\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\test\cef_translator_test.h">
+      <Filter>addons\ofxCef\libs\cef\include\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_box_layout.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_browser_view.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_browser_view_delegate.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_button.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_button_delegate.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_display.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_fill_layout.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_label_button.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_layout.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_menu_button.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_menu_button_delegate.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_panel.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_panel_delegate.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_scroll_view.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_textfield.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_textfield_delegate.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_view.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_view_delegate.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_window.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\views\cef_window_delegate.h">
+      <Filter>addons\ofxCef\libs\cef\include\views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_byte_read_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_closure_task.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_helpers.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_message_router.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_resource_manager.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_scoped_temp_dir.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_stream_resource_handler.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_xml_object.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxCef\libs\cef\include\wrapper\cef_zip_archive.h">
+      <Filter>addons\ofxCef\libs\cef\include\wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxCEFClientAppBrowser.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxCEFClientAppRenderer.h">
+      <Filter>addons\ofxCef\src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
 </Project>
