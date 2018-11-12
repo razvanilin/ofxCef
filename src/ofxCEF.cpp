@@ -111,7 +111,6 @@ int initofxCEF(int argc, char** argv){
 
 	CefSettings settings;
 	settings.background_color = 0xFFFF00FF;
-	settings.single_process = false; 
 	settings.windowless_rendering_enabled = true;
 	settings.command_line_args_disabled = true;
 #if defined(TARGET_OSX)
