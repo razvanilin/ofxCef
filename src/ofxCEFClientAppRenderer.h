@@ -1,15 +1,14 @@
-#ifndef __CEF3SimpleSample__ClientHandler__
-#define __CEF3SimpleSample__ClientHandler__
+#pragma once
 
 #include "include/cef_app.h"
 #include "include/cef_client.h"
 #include "ofxCEFV8ExtensionHandler.h"
 
 //--------------------------------------------------------------
-class ofxCEFClientApp : public CefApp, public CefRenderProcessHandler
+class ofxCEFClientAppRenderer : public CefApp, public CefRenderProcessHandler
 {
 public:
-    ofxCEFClientApp(): v8handler(new ofxCEFV8ExtensionHandler(this)) {};
+    ofxCEFClientAppRenderer(): v8handler(new ofxCEFV8ExtensionHandler(this)) {};
 
     CefRefPtr<CefRenderProcessHandler> GetRenderProcessHandler() OVERRIDE {
         return this;
@@ -44,7 +43,7 @@ public:
         command_line->AppendSwitch(frameScheduling);
 #endif
 
-        printf("Args (OnBeforeCommandLineProcessing): %s", command_line->GetCommandLineString().ToString().c_str());
+        printf("Args (OnBeforeCommandLineProcessing Renderer): %s", command_line->GetCommandLineString().ToString().c_str());
 
         
 		//CefString singleProcess(L"-single-process");
@@ -73,8 +72,6 @@ public:
     CefRefPtr<ofxCEFV8ExtensionHandler> v8handler;
     CefRefPtr<CefV8Context> v8context;
 
-    IMPLEMENT_REFCOUNTING(ofxCEFClientApp);
+    IMPLEMENT_REFCOUNTING(ofxCEFClientAppRenderer);
 
 };
-
-#endif

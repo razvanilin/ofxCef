@@ -3,7 +3,16 @@
 // be found in the LICENSE file.
 
 #include "include/cef_app.h"
-#include "ofxCEFClientApp.h"
+#include "ofxCEFClientAppBrowser.h"
+#include "ofxCEFClientAppRenderer.h"
+
+
+// These flags must match the Chromium values.
+const char kProcessType[] = "type";
+const char kRendererProcess[] = "renderer";
+#if defined(OS_LINUX)
+const char kZygoteProcess[] = "zygote";
+#endif
 
 //--------------------------------------------------------------
 // Entry point function for sub-processes.
@@ -15,8 +24,29 @@ int main(int argc, char* argv[]){
     
     // Provide CEF with command-line arguments.
     CefMainArgs main_args(argc, argv);
+    
+    
+    // Parse command-line arguments.
+    CefRefPtr<CefCommandLine> command_line = CefCommandLine::CreateCommandLine();
+    command_line->InitFromArgv(argc, argv);
+    
+    // Create a ClientApp of the correct type.
+    CefRefPtr<CefApp> app;
+    
+    if (!command_line->HasSwitch(kProcessType)) {
+        app = new ofxCEFClientAppBrowser();
+    }
+    else {
+        const std::string& process_type = command_line->GetSwitchValue(kProcessType);
+        if (process_type == kRendererProcess) {
+            app = new ofxCEFClientAppRenderer();
+        }
+    #if defined(OS_LINUX)
+        else if (process_type == kZygoteProcess) {}
+    #endif
+    }
+    
 
-    CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
     // Execute the sub-process.
     return CefExecuteProcess(main_args, app.get(), NULL);
 }

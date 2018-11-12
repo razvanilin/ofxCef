@@ -4,7 +4,8 @@
 #if defined(TARGET_OSX)
 #include <Cocoa/Cocoa.h>
 #endif
-#include "ofxCEFClientApp.h"
+#include "ofxCEFClientAppBrowser.h"
+#include "ofxCEFClientAppRenderer.h"
 
 
 //--------------------------------------------------------------
@@ -75,37 +76,38 @@ int initofxCEF(int argc, char** argv){
     
     // Create a ClientApp of the correct type.
     
-    CefRefPtr<CefApp> app;
+    CefRefPtr<CefApp> clientApp;
     
     // The command-line flag won't be specified for the browser process.
     if (command_line->HasSwitch(kProcessType)) {
         const std::string& process_type = command_line->GetSwitchValue(kProcessType);
         ofLogNotice() << "Process type: " << process_type;
         if (process_type == kRendererProcess) {
-            app = new ofxCEFClientApp();
+            clientApp = new ofxCEFClientAppRenderer();
         }
 #if defined(OS_LINUX)
         else if (process_type == kZygoteProcess) {
-            return ZygoteProcess;
         }
 #endif
         else {
-            //app = new ClientAppOther();
+            //clientApp = new ClientAppOther();
         }
     }
     else {
-        //app = new ClientAppBrowser();
+        //clientApp = new ClientAppBrowser();
     }
     
-    // Execute the secondary process, if any.
-    int exit_code = CefExecuteProcess(main_args, app, NULL);
+    // Execute the secondary process, if any. (Windows only)
+    int exit_code = CefExecuteProcess(main_args, clientApp, NULL);
     if (exit_code >= 0) {
         return exit_code;
     }
     
 #endif
     
-    //CefRefPtr<ofxCEFClientApp> app(new ofxCEFClientApp);
+    // Use custom CefBrowserProcessHandler
+    // This is the main process for Windows and macOS
+    CefRefPtr<ofxCEFClientAppBrowser> clientAppBrowser(new ofxCEFClientAppBrowser);
 
 	CefSettings settings;
 	settings.background_color = 0xFFFF00FF;
@@ -130,7 +132,7 @@ int initofxCEF(int argc, char** argv){
     
     
     // Initialize CEF
-    if (!CefInitialize(main_args, settings, NULL, NULL)) {
+    if (!CefInitialize(main_args, settings, clientAppBrowser, NULL)) {
         ofLogError() << "CefInitialize failed";
     }
     

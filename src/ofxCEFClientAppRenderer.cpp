@@ -1,8 +1,8 @@
-#include "ofxCEFClientApp.h"
+#include "ofxCEFClientAppRenderer.h"
 
 
 //--------------------------------------------------------------
-void ofxCEFClientApp::OnWebKitInitialized(){    
+void ofxCEFClientAppRenderer::OnWebKitInitialized(){    
     std::string app_code =
         "var app;"
         "if (!app)"
@@ -22,7 +22,7 @@ void ofxCEFClientApp::OnWebKitInitialized(){
 }
 
 
-void ofxCEFClientApp::OnContextCreated(CefRefPtr<CefBrowser> browser,
+void ofxCEFClientAppRenderer::OnContextCreated(CefRefPtr<CefBrowser> browser,
                                        CefRefPtr<CefFrame> frame,
                                        CefRefPtr<CefV8Context> context) {
     v8context = context;
@@ -49,7 +49,7 @@ void ofxCEFClientApp::OnContextCreated(CefRefPtr<CefBrowser> browser,
     
 }
 
-void ofxCEFClientApp::OnContextReleased(CefRefPtr<CefBrowser> browser,
+void ofxCEFClientAppRenderer::OnContextReleased(CefRefPtr<CefBrowser> browser,
                                        CefRefPtr<CefFrame> frame,
                                        CefRefPtr<CefV8Context> context) {
     v8context = NULL;
@@ -59,7 +59,7 @@ void ofxCEFClientApp::OnContextReleased(CefRefPtr<CefBrowser> browser,
     browser->SendProcessMessage(PID_BROWSER, message);
 }
 
-bool ofxCEFClientApp::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
+bool ofxCEFClientAppRenderer::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
                                                    CefProcessId source_process,
                                                    CefRefPtr<CefProcessMessage> message){
     // Retrieve the argument list object.
