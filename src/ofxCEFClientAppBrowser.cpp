@@ -8,7 +8,8 @@ void ofxCEFClientAppBrowser::OnBeforeCommandLineProcessing(const CefString& proc
     // Pass additional command-line flags to the browser process.
     if (process_type.empty()) {
         
-
+        // Allow videos to autoplay
+        command_line->AppendSwitchWithValue("autoplay-policy", "no-user-gesture-required");
         
     }
     
