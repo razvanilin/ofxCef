@@ -3,6 +3,7 @@
 #include "ofAppGLFWWindow.h"
 #if defined(TARGET_OSX)
 #include <Cocoa/Cocoa.h>
+#include "include/wrapper/cef_library_loader.h"
 #endif
 #include "ofxCEFClientAppBrowser.h"
 #include "ofxCEFClientAppRenderer.h"
@@ -53,8 +54,15 @@ HINSTANCE hInst;   // current instance
 #endif
 
 int initofxCEF(int argc, char** argv){
-
+    
 #if defined(TARGET_OSX)
+    // Load the CEF framework library at runtime instead of linking directly
+    // as required by the macOS sandbox implementation.
+    CefScopedLibraryLoader library_loader;
+    if (!library_loader.LoadInMain()) {
+        return 1;
+    }
+    
     CefMainArgs main_args(argc, argv);
 #elif defined(TARGET_WIN32)
     CefMainArgs main_args(::GetModuleHandle(NULL));
@@ -131,7 +139,7 @@ int initofxCEF(int argc, char** argv){
     
     
     // Initialize CEF
-    if (!CefInitialize(main_args, settings, clientAppBrowser, NULL)) {
+    if (!CefInitialize(main_args, settings, clientAppBrowser.get(), NULL)) {
         ofLogError() << "CefInitialize failed";
     }
     
