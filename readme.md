@@ -249,3 +249,4 @@ cef.bind("dataToOF", this, &ofApp::gotMessageFromJS);
 ## Known Issues
 	
 - CEF hijacks the menu bar and makes it unusable, among other things cmd+q isn't working anymore (macOS only).
+- The current version isn't showing anything on macOS Mojave (10.14.1). For some reason OnPaint isn't called anymore. https://magpcss.org/ceforum/viewtopic.php?f=6&t=16371&start=20
