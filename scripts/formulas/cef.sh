@@ -6,7 +6,7 @@ FORMULA_TYPES=( "osx" "vs" "msys2" )
 
 # Define the version and distribution (Standard | Minimal)
 # Is there permanent link to the latest version?
-VER=3.3538.1849.g458cc98
+VER=3.3538.1852.gcb937fc
 DISTRIBUTION="Minimal"
 
 # download the source code and unpack it into LIB_NAME
@@ -53,7 +53,7 @@ function download() {
 function prepare() {
 
   if [ "$TYPE" == "osx" ] ; then
-    cmake -G "Xcode"
+    cmake -G "Xcode" -DUSE_SANDBOX=Off
   elif [ "$TYPE" == "vs" ] || [ "$TYPE" == "msys2" ] ; then
 
     # Set Runtime Library from /MT to /MD
@@ -100,6 +100,7 @@ function copy() {
 
     cp -RHv "Release/Chromium Embedded Framework.framework"  $1/lib/osx/
     cp -RHv "libcef_dll_wrapper/Release/libcef_dll_wrapper.a"  $1/lib/osx/
+    cp -RHv "Release/cef_sandbox.a"  $1/lib/osx/
 
     # Need to build the cef_helper_mac, can only do this after stuff was copied
     xcodebuild -target cef_helper_mac -configuration Release -project $1/../../cef_helper_mac/cef_helper_mac.xcodeproj/
