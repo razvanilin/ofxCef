@@ -127,6 +127,10 @@ int initofxCEF(int argc, char** argv){
     // tcp_socket_win.cc bind() retunred an error: an attempt was made to access a socket in a way forbidden by its access permissions
 #endif
     
+#if !defined(CEF_USE_SANDBOX)
+    settings.no_sandbox = true;
+#endif
+    
     // This could be used on windows, could improve performance
     // If you enable this, 'CefDoMessageLoopWork()' should not be called
 	//settings.multi_threaded_message_loop = true;
