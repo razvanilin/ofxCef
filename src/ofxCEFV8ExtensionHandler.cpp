@@ -27,19 +27,42 @@ bool ofxCEFV8ExtensionHandler::Execute(const CefString &name,
         const std::string jsBindPrefix = "js-bind-";
         CefRefPtr<CefProcessMessage> message = CefProcessMessage::Create(CefString(jsBindPrefix + functionName));
         
-        // Retrieve the argument list object.
-        CefRefPtr<CefListValue> args = message->GetArgumentList();
-        
-        convertList(arguments, args);
-        
-        // Send message
-        CefRefPtr<CefBrowser> browser = CefV8Context::GetCurrentContext()->GetBrowser();
-        browser->SendProcessMessage(PID_BROWSER, message);
-        return true;
-    }
-    
-    
-    if (name == "sendMessageToOF") {
+        // Populate the argument values.
+            CefString type = arguments[0]->GetStringValue();
+            
+            // Create the message object.
+            //CefRefPtr<CefProcessMessage> message = CefProcessMessage::Create(type);
+            
+            // Retrieve the argument list object.
+            CefRefPtr<CefListValue> args = message->GetArgumentList();
+            
+            // Message mane
+            args->SetString(0, arguments[1]->GetStringValue());
+            
+            // Message value
+            if (type == "string") {
+                args->SetString(1, arguments[2]->GetStringValue());
+            }
+            else if (type == "double") {
+                args->SetDouble(1, arguments[2]->GetDoubleValue());
+            }
+            else if (type == "int") {
+                args->SetInt(1, arguments[2]->GetIntValue());
+            }
+            else if (type == "bool") {
+                args->SetBool(1, arguments[2]->GetBoolValue());
+            }
+            else {
+                std::cout << "ofxCEFV8ExtensionHandler received a message of unknown type." << std::endl;
+                return false;
+            }
+            
+            // Send message
+            CefRefPtr<CefBrowser> browser = CefV8Context::GetCurrentContext()->GetBrowser();
+            browser->SendProcessMessage(PID_BROWSER, message);
+            return true;
+
+    } else if (name == "sendMessageToOF") {
         if (arguments.size() == 2 && arguments[0]->IsString()) {
             CefString type;
             

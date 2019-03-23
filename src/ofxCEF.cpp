@@ -216,7 +216,7 @@ void ofxCEF::setup(const string& url, int width, int height){
         enableResize();
     }
     else {
-        fixedSize = true;
+        fixedSize = false;
         width_ = width;
         height_ = height;
     }
@@ -383,6 +383,9 @@ void ofxCEF::onLoadEnd(int httpStatusCode){
 void ofxCEF::bindCallFromJS(CefRefPtr<CefListValue> args) {
     ofxCEFJSMessageArgs msg;
     msg.args = args;
+	if (args->GetType(1)) {
+		std::cout << "ACTUAL SIZE: " << args->GetString(1).ToString() << std::endl;
+	}
     
     ofNotifyEvent(messageFromJS, msg, this);
 }
@@ -539,13 +542,41 @@ void ofxCEF::keyPressed(ofKeyEventArgs &e){
     
     if (e.key == OF_KEY_LEFT || e.key == OF_KEY_UP
         || e.key == OF_KEY_RIGHT || e.key == OF_KEY_DOWN
-        || e.key == OF_KEY_BACKSPACE || e.key == OF_KEY_DEL) {
+        || e.key == OF_KEY_BACKSPACE || e.key == OF_KEY_DEL
+		|| e.key == OF_KEY_LEFT_COMMAND || e.key == OF_KEY_RIGHT_COMMAND || e.key == OF_KEY_COMMAND
+		|| e.key == OF_KEY_LEFT_CONTROL || e.key == OF_KEY_RIGHT_CONTROL || e.key == OF_KEY_CONTROL
+		|| e.key == OF_KEY_RIGHT_ALT || e.key == OF_KEY_LEFT_ALT || e.key == OF_KEY_ALT
+		|| e.key == OF_KEY_LEFT_SHIFT || e.key == OF_KEY_RIGHT_SHIFT || e.key == OF_KEY_SHIFT) {
 
-		event.windows_key_code = e.key;
+#ifdef WIN32
+		switch (e.key)
+		{
+		case OF_KEY_LEFT:
+			event.windows_key_code = VK_LEFT;
+			break;
+		case OF_KEY_RIGHT:
+			event.windows_key_code = VK_RIGHT;
+			break;
+		case OF_KEY_UP:
+			event.windows_key_code = VK_UP;
+			break;
+		case OF_KEY_DOWN:
+			event.windows_key_code = VK_DOWN;
+			break;
+		case OF_KEY_DEL:
+			event.windows_key_code = VK_DELETE;
+			break;
+		default:
+			event.windows_key_code = e.key;
+			break;
+		}
+#endif
         event.native_key_code = e.scancode;
         event.type = KEYEVENT_KEYDOWN;
+		event.character = (char)e.key;
         
     } else {
+		cout << "KEY:: " << e.key << " - KEYCODE:: " << e.keycode << " - SCANCODE::" << e.scancode << " - OF_CODE " << e.hasModifier(OF_KEY_SHIFT) << " - modifiers " << e.modifiers << endl;
 		event.windows_key_code = e.key;
         event.native_key_code = e.scancode;
         event.character = (char)e.key;
@@ -563,15 +594,19 @@ void ofxCEF::keyReleased(ofKeyEventArgs &e){
     
     CefKeyEvent event;
     
-    if (e.key == OF_KEY_LEFT || e.key == OF_KEY_UP
-        || e.key == OF_KEY_RIGHT || e.key == OF_KEY_DOWN
-        || e.key == OF_KEY_BACKSPACE || e.key == OF_KEY_DEL) {
-        
+	if (e.key == OF_KEY_LEFT || e.key == OF_KEY_UP
+		|| e.key == OF_KEY_RIGHT || e.key == OF_KEY_DOWN
+		|| e.key == OF_KEY_BACKSPACE || e.key == OF_KEY_DEL
+		|| e.key == OF_KEY_LEFT_COMMAND || e.key == OF_KEY_RIGHT_COMMAND || e.key == OF_KEY_COMMAND
+		|| e.key == OF_KEY_LEFT_CONTROL || e.key == OF_KEY_RIGHT_CONTROL || e.key == OF_KEY_CONTROL
+		|| e.key == OF_KEY_RIGHT_ALT || e.key == OF_KEY_LEFT_ALT || e.key == OF_KEY_ALT
+		|| e.key == OF_KEY_LEFT_SHIFT || e.key == OF_KEY_RIGHT_SHIFT || e.key == OF_KEY_SHIFT) {
+
         // Hack - Need to do this otherwise we loose an event.
 		event.windows_key_code = e.key;
         event.native_key_code = e.scancode;
         event.character = (char)e.key;
-        event.type = KEYEVENT_CHAR;
+        event.type = KEYEVENT_KEYUP;
         browser()->GetHost()->SendKeyEvent(event);
         
     } else {
