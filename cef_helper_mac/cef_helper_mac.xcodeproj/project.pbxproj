@@ -10,7 +10,6 @@
 		411603EA2192EED00032044A /* ofxCEFClientAppBrowser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 411603E92192EED00032044A /* ofxCEFClientAppBrowser.cpp */; };
 		411603ED2192F6A40032044A /* ofxCEFClientAppRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 411603EB2192F6A30032044A /* ofxCEFClientAppRenderer.cpp */; };
 		412C18221F95F89200E2B940 /* ofxCEFV8ExtensionHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3379499ACE8BED89F23E2F5E /* ofxCEFV8ExtensionHandler.cpp */; };
-		412C18251F95F89200E2B940 /* Chromium Embedded Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676C60DA887A77C13D96A1B0 /* Chromium Embedded Framework.framework */; };
 		412C18301F95F8D900E2B940 /* process_helper_mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2CB6F3196C2D9B0DA81F16D /* process_helper_mac.cpp */; };
 		412C18361F960C7600E2B940 /* cefListV8Converter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 412C18331F960C4000E2B940 /* cefListV8Converter.cpp */; };
 /* End PBXBuildFile section */
@@ -290,7 +289,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				412C18251F95F89200E2B940 /* Chromium Embedded Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,7 +842,7 @@
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "cef_helper_mac-Info.plist";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../../../../";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -900,7 +898,7 @@
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
-				INFOPLIST_FILE = "cef_helper_mac-Info.plist";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../../../../";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
