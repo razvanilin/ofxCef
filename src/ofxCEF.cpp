@@ -576,7 +576,6 @@ void ofxCEF::keyPressed(ofKeyEventArgs &e){
 		event.character = (char)e.key;
         
     } else {
-		cout << "KEY:: " << e.key << " - KEYCODE:: " << e.keycode << " - SCANCODE::" << e.scancode << " - OF_CODE " << e.hasModifier(OF_KEY_SHIFT) << " - modifiers " << e.modifiers << endl;
 		event.windows_key_code = e.key;
         event.native_key_code = e.scancode;
         event.character = (char)e.key;
