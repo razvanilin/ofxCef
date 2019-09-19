@@ -27,7 +27,7 @@ public:
     
 
     bool GetScreenInfo(CefRefPtr<CefBrowser> browser, CefScreenInfo& screen_info) OVERRIDE;
-    bool GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect) OVERRIDE;
+    void GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect) OVERRIDE;
     void OnPaint(CefRefPtr<CefBrowser> browser,
                  PaintElementType type,
                  const RectList &dirtyRects,

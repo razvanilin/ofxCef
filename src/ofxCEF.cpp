@@ -235,7 +235,7 @@ void ofxCEF::setup(const string& url, int width, int height){
     // In theory multiple browsers could be created with the same Client.
     // But that would make assigning the browser instances and OnProcessMessageReceived() callbacks to the right ofxCEF instances complicated
 	client = new ofxCEFBrowserClient(this, renderHandler);
-    CefBrowserHost::CreateBrowser(windowInfo, client.get(), url, settings, NULL);
+    CefBrowserHost::CreateBrowser(windowInfo, client.get(), url, settings, NULL, NULL);
     
     if(!client) { ofLogError() << "client pointer is NULL"; }
     

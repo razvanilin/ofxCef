@@ -34,7 +34,7 @@ bool ofxCEFV8ExtensionHandler::Execute(const CefString &name,
         
         // Send message
         CefRefPtr<CefBrowser> browser = CefV8Context::GetCurrentContext()->GetBrowser();
-        browser->SendProcessMessage(PID_BROWSER, message);
+        browser->GetMainFrame()->SendProcessMessage(PID_BROWSER, message);
         return true;
     }
     
@@ -85,7 +85,7 @@ bool ofxCEFV8ExtensionHandler::Execute(const CefString &name,
             
             // Send message
             CefRefPtr<CefBrowser> browser = CefV8Context::GetCurrentContext()->GetBrowser();
-            browser->SendProcessMessage(PID_BROWSER, message);
+            browser->GetMainFrame()->SendProcessMessage(PID_BROWSER, message);
             return true;
             
         }
@@ -124,7 +124,7 @@ bool ofxCEFV8ExtensionHandler::Execute(const CefString &name,
             
             // Send message
             CefRefPtr<CefBrowser> browser = CefV8Context::GetCurrentContext()->GetBrowser();
-            browser->SendProcessMessage(PID_BROWSER, message);
+            browser->GetMainFrame()->SendProcessMessage(PID_BROWSER, message);
             return true;
 
          }

@@ -45,7 +45,7 @@ void ofxCEFClientAppRenderer::OnContextCreated(CefRefPtr<CefBrowser> browser,
     // Tell browser that V8 Context was created
     CefRefPtr<CefProcessMessage> message = CefProcessMessage::Create(CefString("OnV8ContextCreated"));
     // Send message
-    browser->SendProcessMessage(PID_BROWSER, message);
+    browser->GetMainFrame()->SendProcessMessage(PID_BROWSER, message);
     
 }
 
@@ -56,10 +56,11 @@ void ofxCEFClientAppRenderer::OnContextReleased(CefRefPtr<CefBrowser> browser,
     // Tell browser that V8 Context was released
     CefRefPtr<CefProcessMessage> message = CefProcessMessage::Create(CefString("OnV8ContextReleased"));
     // Send message
-    browser->SendProcessMessage(PID_BROWSER, message);
+    browser->GetMainFrame()->SendProcessMessage(PID_BROWSER, message);
 }
 
 bool ofxCEFClientAppRenderer::OnProcessMessageReceived(CefRefPtr<CefBrowser> browser,
+                                                   CefRefPtr<CefFrame> frame,
                                                    CefProcessId source_process,
                                                    CefRefPtr<CefProcessMessage> message){
     // Retrieve the argument list object.

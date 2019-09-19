@@ -137,7 +137,7 @@ void ofxCEF::bind(const string& functionName, ListenerClass * listener, void (Li
     
     // Send the message to the render process
     if (browser()) {
-        browser()->SendProcessMessage(PID_RENDERER, message);
+        browser()->GetMainFrame()->SendProcessMessage(PID_RENDERER, message);
     }
     
     ofAddListener(messageFromJS, listener, listenerMethod, prio);
