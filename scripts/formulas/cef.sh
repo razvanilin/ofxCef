@@ -6,7 +6,7 @@ FORMULA_TYPES=( "osx" "vs" "msys2" )
 
 # Define the version and distribution (Standard | Minimal)
 # Is there permanent link to the latest version?
-VER=3.3538.1852.gcb937fc
+VER="79.1.38+gecefb59+chromium-79.0.3945.130"
 DISTRIBUTION="Minimal"
 
 # download the source code and unpack it into LIB_NAME
@@ -21,29 +21,35 @@ function download() {
     DISTRIBUTION=""
   fi
 
+  # Percent-encoding: + -> %2B
+  VER_URL=${VER//\+/\%2B}
+
   # Build Filename
   local FILENAME=cef_binary_${VER}_macosx64${DISTRIBUTION}
+  local FILENAME_URL=cef_binary_${VER_URL}_macosx64${DISTRIBUTION}
 
   if [ "$TYPE" == "osx" ] ; then
     FILENAME=cef_binary_${VER}_macosx64${DISTRIBUTION}
+    FILENAME_URL=cef_binary_${VER_URL}_macosx64${DISTRIBUTION}
   elif [ "$TYPE" == "vs" ] || [ "$TYPE" == "msys2" ] ; then
     FILENAME=cef_binary_${VER}_windows64${DISTRIBUTION}
+    FILENAME_URL=cef_binary_${VER_URL}_windows64${DISTRIBUTION}
   fi
 
   # Download
   echo "Downloading ${FILENAME}"
 
-  curl -O "http://opensource.spotify.com/cefbuilds/${FILENAME}.tar.bz2"
-  curl -O "http://opensource.spotify.com/cefbuilds/${FILENAME}.tar.bz2.sha1"
+  curl -O "http://opensource.spotify.com/cefbuilds/${FILENAME_URL}.tar.bz2"
+  curl -O "http://opensource.spotify.com/cefbuilds/${FILENAME_URL}.tar.bz2.sha1"
 
   # Unpacking and cleaning
   echo "TODO: check against the SHA"
   # if [ "$(shasum $FILENAME.tar.gz | awk '{print $1}')" == "$(cat $FILENAME.tar.gz.sha1)" ] ;  then  
   echo "Unpacking"
-  tar -xf $FILENAME.tar.bz2
+  tar -xf $FILENAME_URL.tar.bz2
   mv $FILENAME cef
-  rm $FILENAME.tar.bz2
-  rm $FILENAME.tar.bz2.sha1
+  rm $FILENAME_URL.tar.bz2
+  rm $FILENAME_URL.tar.bz2.sha1
   # else
   #   echoError "Invalid shasum for $FILENAME."
   # fi

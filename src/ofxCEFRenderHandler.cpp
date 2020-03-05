@@ -201,9 +201,9 @@ bool ofxCEFRenderHandler::GetScreenInfo(CefRefPtr<CefBrowser> browser,
 }
 
 //--------------------------------------------------------------
-bool ofxCEFRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect){
+void ofxCEFRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &rect){
     
-    if (bIsShuttingDown) return false;
+    if (bIsShuttingDown) return;
     
     if (bIsRetinaDisplay){
         rect = CefRect(0,0, w*0.5, h*0.5);
@@ -211,7 +211,7 @@ bool ofxCEFRenderHandler::GetViewRect(CefRefPtr<CefBrowser> browser, CefRect &re
         rect = CefRect(0,0, w, h);
     }
     
-    return true;
+    return;
 }
 
 //--------------------------------------------------------------
