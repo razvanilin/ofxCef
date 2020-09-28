@@ -546,7 +546,7 @@ void ofxCEF::keyPressed(ofKeyEventArgs &e){
 		|| e.key == OF_KEY_LEFT_COMMAND || e.key == OF_KEY_RIGHT_COMMAND || e.key == OF_KEY_COMMAND
 		|| e.key == OF_KEY_LEFT_CONTROL || e.key == OF_KEY_RIGHT_CONTROL || e.key == OF_KEY_CONTROL
 		|| e.key == OF_KEY_RIGHT_ALT || e.key == OF_KEY_LEFT_ALT || e.key == OF_KEY_ALT
-		|| e.key == OF_KEY_LEFT_SHIFT || e.key == OF_KEY_RIGHT_SHIFT || e.key == OF_KEY_SHIFT) {
+		|| e.key == OF_KEY_LEFT_SHIFT || e.key == OF_KEY_RIGHT_SHIFT || e.key == OF_KEY_SHIFT || e.key == OF_KEY_TAB) {
 
 #ifdef WIN32
 		switch (e.key)
