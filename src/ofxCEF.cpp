@@ -599,7 +599,7 @@ void ofxCEF::keyReleased(ofKeyEventArgs &e){
 		|| e.key == OF_KEY_LEFT_COMMAND || e.key == OF_KEY_RIGHT_COMMAND || e.key == OF_KEY_COMMAND
 		|| e.key == OF_KEY_LEFT_CONTROL || e.key == OF_KEY_RIGHT_CONTROL || e.key == OF_KEY_CONTROL
 		|| e.key == OF_KEY_RIGHT_ALT || e.key == OF_KEY_LEFT_ALT || e.key == OF_KEY_ALT
-		|| e.key == OF_KEY_LEFT_SHIFT || e.key == OF_KEY_RIGHT_SHIFT || e.key == OF_KEY_SHIFT) {
+		|| e.key == OF_KEY_LEFT_SHIFT || e.key == OF_KEY_RIGHT_SHIFT || e.key == OF_KEY_SHIFT || e.key == OF_KEY_TAB) {
 
         // Hack - Need to do this otherwise we loose an event.
 		event.windows_key_code = e.key;
