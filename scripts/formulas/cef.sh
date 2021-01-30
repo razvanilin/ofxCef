@@ -39,8 +39,8 @@ function download() {
   # Download
   echo "Downloading ${FILENAME}"
 
-  curl -O "http://opensource.spotify.com/cefbuilds/${FILENAME_URL}.tar.bz2"
-  curl -O "http://opensource.spotify.com/cefbuilds/${FILENAME_URL}.tar.bz2.sha1"
+  curl -O "https://cef-builds.spotifycdn.com/${FILENAME_URL}.tar.bz2"
+  curl -O "https://cef-builds.spotifycdn.com/${FILENAME_URL}.tar.bz2.sha1"
 
   # Unpacking and cleaning
   echo "TODO: check against the SHA"
